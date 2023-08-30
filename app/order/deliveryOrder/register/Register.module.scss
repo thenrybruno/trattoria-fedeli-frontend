@@ -39,7 +39,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 50px;
+    padding-top: 30px;
     gap: 20px;
 
     h2 {
@@ -74,22 +74,6 @@
             display: flex;
             flex-direction: column;
             margin-bottom: 20px;
-        }
-    }
-
-    p{
-        font-size: 20px;
-        font-weight: 700;
-        color: $text-color;
-
-        span{
-            color: $light-gray-color;
-            transition: .3s;
-            font-size: 20px;
-        }
-
-        span:hover{
-            color: $dark-gray-color;
         }
     }
 

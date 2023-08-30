@@ -3,7 +3,7 @@ import styles from './TableOrder.module.scss'
 import Footer from '@/src/componets/Footer'
 import Link from 'next/link'
 
-export default function Order() {
+export default function TableOrder() {
     return (
         <main className={styles.main}>
             <section className={styles.container_1}>
@@ -27,7 +27,9 @@ export default function Order() {
                         </div>
                     </div>
                 </form>
-                <button className={styles.button}>Prosseguir</button>
+                <Link href={'/order/tableOrder/tableMenu'}>
+                    <button className={styles.button}>Prosseguir</button>
+                </Link>
                 <Link href={'/order'} className={styles.back_text}>Voltar</Link>
                 <div className={styles.politic}>
                     <p>
