@@ -1,0 +1,22 @@
+@import '/src/styles/colors';
+
+.main{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    background-color: $color-backgroud;
+
+    h2{
+        font-size: 48px;
+        font-weight: 700;
+        color: $light-red-color;
+    }
+
+    p{
+        font-size: 20px;
+        font-weight: 400;
+        color: $dark-gray-color;
+    }
+}
