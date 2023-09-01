@@ -1,0 +1,34 @@
+@import './colors';
+
+@mixin button   {
+    background-color: $light-green-color;
+    background-image: linear-gradient(100deg, $light-green-color 0%, $dark-green-color 100%);
+    border: none;
+    border-radius: 15px;
+    color: $white-color;
+    cursor: pointer;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+
+
+    &::before  {
+        background-color: $dark-green-color ;
+        background-image: linear-gradient(100deg, $dark-green-color 0%, $light-green-color 100%);
+        bottom: 0;
+        border-radius: 15px;
+        content: "";
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition: opacity 0.3s linear;
+        z-index: -1;
+    }
+
+    &:hover::before {
+        opacity: 1;
+    }
+}
+

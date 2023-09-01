@@ -1,19 +1,19 @@
-@import '@/src/styles/_colors.scss';
+@import '@/src/styles/globals';
 
 .container {
     background-color: $color-backgroud;
     background-size: cover;
+    border: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 80px;
-    padding: 0px;
-
+    margin: -8.45px;
+    min-height: 100vh;
+    padding: 25px;
+    
     div {
         display: flex;
         flex-direction: column;
-        gap: 20px;
-        padding: 100px;
 
         h2 {
             font-size: 90px;
@@ -29,26 +29,11 @@
         }
     }
 
-    .img_tomato {
-        padding-right: 100px;
-    }
 }
 
 .btn {
     width: 250px;
     height: 70px;
-    border-radius: 15px;
-    border: none;
     font-size: 30px;
-    font-weight: 700;
-    color: $white-color;
-    background: $light-green-color;
-    background: linear-gradient(100deg, $light-green-color 0%, $dark-green-color 100%);
-    cursor: pointer;
-    transition: .3s;
-}
-
-.btn:hover {
-    background: $dark-green-color ;
-    background: linear-gradient(100deg, $dark-green-color 0%, $light-green-color 100%);
+    @include button;
 }
