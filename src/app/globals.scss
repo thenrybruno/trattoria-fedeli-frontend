@@ -1,10 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Neuton:wght@300;400;700&family=Poppins:wght@300;400;500;600;700&display=swap');
-
+@import '../styles/_colors.scss';
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   font-family: 'Poppins', sans-serif;
+}
+
+html  {
+  padding: 0;
+  margin: 0;
+}
+
+body  {
+  background-color: $color-backgroud;
+  margin: 0;
+  padding: 0px;
 }
 
 a{

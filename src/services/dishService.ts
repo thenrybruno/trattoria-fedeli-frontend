@@ -3,7 +3,7 @@ import api from "./api";
 export type DishType  =   {
     id: number,
     name: string,
-    deatils: string,
+    details: string,
     vegetarian: boolean,
     price: number,
     imageUrl: string,

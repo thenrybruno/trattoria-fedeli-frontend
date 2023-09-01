@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import styles from './Order.module.scss'
-import Footer from '@/src/componets/Footer'
+import styles from './styles.module.scss'
+import Footer from '@/src/components/common/Footer'
 import Link from 'next/link'
 
 export default function Order() {
@@ -11,10 +11,10 @@ export default function Order() {
             </section>
             <section className={styles.container_2}>
                 <h2>Como deseja fazer seu pedido?</h2>
-                <Link href={'/order/tableOrder'}>
+                <Link href={'/table-order'}>
                     <button className={styles.button}>Estou no Restaurante!</button>
                 </Link>
-                <Link href={'/order/deliveryOrder'}>
+                <Link href={'/delivery-order'}>
                     <button className={styles.button}>Quero receber em casa!</button>
                 </Link>
                 <Link href={'/'} className={styles.back_text}>Voltar</Link>

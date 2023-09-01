@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import styles from './TableOrder.module.scss'
-import Footer from '@/src/componets/Footer'
+import Footer from '@/src/components/common/Footer'
 import Link from 'next/link'
 
 export default function TableOrder() {
@@ -27,7 +27,7 @@ export default function TableOrder() {
                         </div>
                     </div>
                 </form>
-                <Link href={'/order/tableOrder/tableMenu'}>
+                <Link href={'/table-menu'}>
                     <button className={styles.button}>Prosseguir</button>
                 </Link>
                 <Link href={'/order'} className={styles.back_text}>Voltar</Link>

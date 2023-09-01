@@ -6,6 +6,7 @@ export type CategoryType    =   {
     name: string
     description: string
     position: number
+    dishes?: DishType[]
 }
 
 const token = sessionStorage.getItem('user-token')

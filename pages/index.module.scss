@@ -1,13 +1,13 @@
-@import '../styles/colors';
+@import '@/src/styles/_colors.scss';
 
 .container {
-    width: 99vw;
-    height: 97vh;
     background-color: $color-backgroud;
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 80px;
+    padding: 0px;
 
     div {
         display: flex;

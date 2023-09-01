@@ -1,5 +1,5 @@
 import Image from "next/image"
-import styles from '../styles/Header.module.scss'
+import styles from './index.module.scss'
 
 const Header = () => {
     return (
