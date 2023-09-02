@@ -1,0 +1,111 @@
+@import '@/src/styles/globals.scss';
+
+.main {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.button {
+    width: 640px;
+    height: 70px;
+    font-size: 35px;
+    @include button;
+}
+
+.container_1 {
+    width: 50%;
+    background: $light-red-color;
+    background: linear-gradient(100deg, $light-red-color 0%, $dark-red-color 100%);
+    display: grid;
+    place-content: center;
+}
+
+.container_2 {
+    width: 50%;
+    background-color: $color-backgroud;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    gap: 20px;
+
+    h2 {
+        font-family: 'Neuton';
+        font-size: 52px;
+        font-weight: 700;
+        color: $dark-green-color;
+    }
+
+    span {
+        color: $dark-green-color;
+        font-size: 24px;
+        font-weight: 700;
+        border: none;
+    }
+
+    form {
+        font-size: 24px;
+        color: $dark-green-color;
+        font-weight: 700;
+
+        input {
+            background-color: $input-color;
+            border: none;
+            border-radius: 10px;
+            height: 50px;
+            width: 600px;
+            font-size: 20px;
+        }
+
+        .flex_input {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+    }
+
+    p{
+        font-size: 20px;
+        font-weight: 700;
+        color: $text-color;
+
+        span{
+            color: $light-gray-color;
+            transition: .3s;
+            font-size: 20px;
+        }
+
+        span:hover{
+            color: $dark-gray-color;
+        }
+    }
+
+    .back_text{
+        color: $dark-green-color;
+        font-size: 24px;
+        font-weight: 700;
+        margin-top: -10px;
+        transition: .3s;
+    }
+
+    .back_text:hover{
+        color: $light-green-color;
+    }
+
+}
+
+.politic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: $text-color;
+    font-size: 15px;
+
+    span {
+        color: $light-gray-color;
+        font-size: 15px;
+    }
+}

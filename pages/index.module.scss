@@ -1,0 +1,39 @@
+@import '@/src/styles/globals';
+
+.container {
+    background-color: $color-backgroud;
+    background-size: cover;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -8.45px;
+    min-height: 100vh;
+    padding: 25px;
+    
+    div {
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            font-size: 90px;
+            font-weight: 700;
+            color: $dark-green-color;
+        }
+
+        p {
+            font-size: 30px;
+            font-family: 'Neuton', sans-serif;
+            font-weight: 700;
+            color: $text-color;
+        }
+    }
+
+}
+
+.btn {
+    width: 250px;
+    height: 70px;
+    font-size: 30px;
+    @include button;
+}
