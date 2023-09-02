@@ -1,6 +1,7 @@
 import React from "react"
-import { ProductType } from "../services/products"
-import CardProduct from "./CardProduct"
+import { ProductType } from "../../services/products"
+import CardProduct from "../CardProduct"
+import styles from './index.module.scss'
 
 
 type ListProductsProps = {
@@ -9,7 +10,7 @@ type ListProductsProps = {
 
 const ListProducts: React.FC<ListProductsProps> = ({ products }) => {
     return (
-        <div>
+        <div className={styles.container}>
             {products.map(product => (
                 <div key={product.id}>
                     <CardProduct

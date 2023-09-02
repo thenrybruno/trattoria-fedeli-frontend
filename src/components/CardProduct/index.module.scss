@@ -1,2 +1,76 @@
-@import '../../styles/colors';
+@import '../../styles/globals.scss';
 
+.card{
+    width: 300px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #faebd7;
+    padding: 20px;
+    border-radius: 20px;
+
+    h3{
+        font-size: 20px;
+        color: $light-gray-color;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .details{
+        font-size: 12px;
+        font-weight: 400;
+        color: $dark-gray-color;
+        text-align: center;
+    }
+
+    .price{
+        font-size: 20px;
+        font-weight: 700;
+        color: $light-green-color;
+    }
+
+    .button_add_dish{
+        width: 200px;
+        height: 35px;
+        border: none;
+        font-size: 16px;
+        font-weight: 700;
+        @include button
+    }
+}
+
+.remove_button{
+    width: 30px;
+    height: 30px;
+    color: $text-color-light;
+    background-color: $light-red-color;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    margin-left: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.add_button{
+    width: 30px;
+    height: 30px;
+    color: $text-color-light;
+    background-color: $light-green-color;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.number{
+    height: 30px;
+    background-color: $color-backgroud;
+    padding: 0 20px;
+}
