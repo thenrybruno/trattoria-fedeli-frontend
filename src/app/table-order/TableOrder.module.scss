@@ -7,11 +7,9 @@
 }
 
 .logo {
+    bottom: 42%;
     display: block;
-    margin: 0 auto;
-    padding: 0 auto;
     position: sticky;
-    top: 42%;
     width: 400px;
 }
 
@@ -27,25 +25,12 @@
 }
 
 .container_1 {
-    width: 50%;
-    background: $light-red-color;
-    background: linear-gradient(100deg, $light-red-color 0%, $dark-red-color 100%);
-    display: grid;
-    place-content: center;
-    margin: 0 auto;
-    min-height: 100vh;
+    @include container_1;
 }
 
 .container_2 {
-    align-self: center;
-    width: 50%;
-    background-color: $color-backgroud;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 50px;
-    margin: 0 auto;
-    gap: 30px;
+    @include container_2;
+
 
     h2 {
         font-family: 'Neuton';
@@ -53,7 +38,7 @@
         font-weight: 700;
         color: $dark-green-color;
         text-align: center;
-        width: 400px;
+        width: 380px;
     }
 
     span {

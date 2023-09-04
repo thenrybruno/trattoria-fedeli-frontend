@@ -3,15 +3,11 @@
 .main {
     display: flex;
     min-height: 100vh;
-    width: 100%;
 }
 
 .logo {
     display: block;
-    margin: 0 auto;
-    padding: 0 auto;
     position: sticky;
-    top: 42%;
     width: 400px;
 }
 
@@ -27,23 +23,11 @@
 }
 
 .container_1 {
-    width: 50%;
-    background: $light-red-color;
-    background: linear-gradient(100deg, $light-red-color 0%, $dark-red-color 100%);
-    display: grid;
-    place-content: center;
+    @include container_1;
 }
 
 .container_2 {
-    align-self: center;
-    width: 50%;
-    background-color: $color-backgroud;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 130px 20px 0 20px;
-    gap: 40px;
-    margin: 0 auto;
+    @include container_2;
 
     h2 {
         font-family: 'Neuton';
