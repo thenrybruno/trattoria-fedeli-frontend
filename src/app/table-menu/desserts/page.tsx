@@ -19,7 +19,7 @@ const TableMenu: NextPage = (props: {
             <main className={styles.main}>
                 <h2>As melhores opções para o seu jantar!</h2>
                 <p>Navegue pelo nosso menu e descubra o melhor sabor para hoje!</p>
-                <section>
+                <section className={styles.productSection}>
                     <ul className={styles.ul}>
                         <Link href={'/table-menu'} >
                             <li className={styles.li}>Entradas</li>

@@ -7,6 +7,8 @@
     justify-content: space-around;
     align-items: center;
     background-color: $dark-red-color;
+    position: fixed;
+    z-index: 100;
 
     input{
         width: 300px;
