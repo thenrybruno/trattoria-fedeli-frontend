@@ -104,3 +104,27 @@
     background-color: $color-backgroud;
     padding: 0 20px;
 }
+
+@media (max-width: 768px) {
+    .card {
+        width: 270px;
+    }
+
+    .image {
+        width: 120px;
+    }
+
+    .h3 {
+        width: 290px;
+    }
+
+    .details {
+        font-size: 10px;
+    }
+
+    .category {
+        margin-bottom: -20px;
+        margin-right: 40px;
+        width: 30px;
+    }
+}

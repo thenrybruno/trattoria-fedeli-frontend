@@ -77,3 +77,38 @@
         width: 90px;
     }
 }
+
+@media (max-width: 768px) {
+    .productSection {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-left: -220px;
+    }
+    .ul {
+        align-self: flex-start;
+        flex-direction: row-reverse;
+        gap: 15px;
+        transform: rotate(270deg);
+        margin-right: -225px;
+        margin-top: 260px;
+        height: 40px;
+        width: 480px;
+    }
+
+    .li {
+        font-size: 20px;
+        height: 44px;
+        width: 179px;
+    }
+
+    .main {
+        padding: 120px 0px;
+        width: 100%;
+
+        h2 {
+            font-size: 24px;
+        }
+    }
+}

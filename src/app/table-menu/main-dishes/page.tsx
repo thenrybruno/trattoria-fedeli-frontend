@@ -1,24 +1,13 @@
-'use client'
 import Header from '@/src/components/Header'
 import styles from '../TableMenu.module.scss'
 import { NextPage } from 'next'
-import { ReactNode, useEffect } from 'react'
+import { ReactNode } from 'react'
 import Footer from '@/src/components/common/Footer'
 import '@/src/styles/globals.scss'
 import Link from 'next/link'
 import MainDishes from '@/src/components/ListProducts/MainDishes'
-import { useRouter } from 'next/navigation'
 
 const TableMenu: NextPage = (props: { children?: ReactNode }) => {
-    const router = useRouter()
-    useEffect(() => {
-        if (!sessionStorage.getItem('isLoggedIn')) {
-            router.push('/')
-        } else {
-            router.push('/table-menu')
-        }
-    }, [])
-
     return (
         <section className={styles.section}>
             <Header />
