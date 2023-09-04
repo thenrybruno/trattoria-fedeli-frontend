@@ -1,9 +1,15 @@
 @import '@/src/styles/globals';
 
+.section    {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
 .main{
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 30px;
     align-items: center;
     padding-top: 20px;
     background-color: $color-backgroud;
@@ -25,7 +31,6 @@
 .ul {
     align-items: center;
     display: flex;
-    color: $light-green-color;
     font-size: 20px;
     font-weight: bold;
     gap: 10px;
@@ -35,6 +40,7 @@
 .li {
     background-color: $selector;
     border-radius: 15px 15px 0px 0px;
+    color: $light-green-color;
     cursor: pointer;
     display: grid;
     list-style-type: none;
@@ -43,4 +49,3 @@
     text-align: center;
     width: 179px;
 }
-

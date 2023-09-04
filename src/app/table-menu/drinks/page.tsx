@@ -1,11 +1,11 @@
 import Header from "@/src/components/Header";
-import styles from './TableMenu.module.scss';
+import styles from '../TableMenu.module.scss';
 import { NextPage } from "next";
-import { ReactNode, useState } from "react";
+import { ReactNode } from "react";
 import Footer from "@/src/components/common/Footer";
-import Entrances from "@/src/components/ListProducts/Entrances";
 import '@/src/styles/globals.scss'
 import Link from "next/link";
+import Drinks from "@/src/components/ListProducts/Drinks";
 
 const TableMenu: NextPage = (props: {
     children?: ReactNode
@@ -20,13 +20,13 @@ const TableMenu: NextPage = (props: {
                 <section>
                     <ul className={styles.ul}>
                         <Link href={'/table-menu'} >
-                            <li className={styles.li + ' active'}>Entradas</li>
+                            <li className={styles.li}>Entradas</li>
                         </Link>
                         <Link href={'/table-menu/main-dishes'}>
                             <li className={styles.li}>Pratos</li>
                         </Link>
                         <Link href={'/table-menu/drinks'}>
-                            <li className={styles.li}>Bebidas</li>
+                            <li className={styles.li + ' active'}>Bebidas</li>
                         </Link>
                         <Link href={'/table-menu/desserts'}>
                             <li className={styles.li}>Sobremesas</li>
@@ -37,7 +37,7 @@ const TableMenu: NextPage = (props: {
                     </ul>
                     <div className={styles.menu}>
                         {/* @ts-ignore */}
-                        <Entrances/>
+                        <Drinks />
                     </div>
                 </section>
             </main>

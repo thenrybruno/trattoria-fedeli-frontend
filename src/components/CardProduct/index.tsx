@@ -10,16 +10,17 @@ type CardProductsProps = {
 }
 
 const CardProduct: React.FC<CardProductsProps> = ({ product }) =>{
-    const { name, details, price, imageUrl } = product
+    const { name, details, price, imageUrl, vegetarian } = product
     const { addProduct, removeProduct } = useCommand()
 
     return(
         <div className={styles.card}>
-            <img src={imageUrl} alt={name} width={180} height={180}/>
-            <h3>{name}</h3>
+            <img src={vegetarian === true ? "/cards/vegetarian.svg" : "/cards/not-vegetarian.svg"} alt="category-image" className={styles.category} />
+            <img src={imageUrl} alt={name} className={styles.image}/>
+            <h3 className={styles.h3}>{name}</h3>
             <p className={styles.details}>{details}</p>
-            <p className={styles.price}>
-                R$ <caption className={styles.value}>{price}</caption>
+            <span className={styles.price}>
+                R$ {price}
                 <span className={styles.span}>
                     <button className={styles.remove_button} onClick={() => {
                         removeProduct(product.id)
@@ -33,7 +34,7 @@ const CardProduct: React.FC<CardProductsProps> = ({ product }) =>{
                         +
                     </button>
                 </span>
-            </p>
+            </span>
             <button className={styles.button_add_dish} onClick={ () => {
                 addProduct(product)
             }}>Adicionar</button>

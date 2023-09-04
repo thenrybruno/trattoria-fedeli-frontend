@@ -48,7 +48,7 @@
         "id": 6,
         "name": "Parmigiano Reggiano Tagliato",
         "details": "O melhor queijo nativo da região de Parma. Com altas notas de umami, e um sabor intenso.",
-        "vegetarian": false,
+        "vegetarian": true,
         "price": 22.95,
         "imageUrl": "https://i.imgur.com/wfuiRyT.jpeg",
         "category": "entrances"
@@ -57,7 +57,7 @@
         "id": 7,
         "name": "Gorgonzola Tagliato",
         "details": "Queijo gorgonzola fermentado e curado. Acompanha mel de Nápoles.",
-        "vegetarian": false,
+        "vegetarian": true,
         "price": 18.95,
         "imageUrl": "https://i.imgur.com/R0cyXHy.jpeg",
         "category": "entrances"
@@ -66,7 +66,7 @@
         "id": 8,
         "name": "Pecorino Romano Tagliato",
         "details": "Queijo de cabra saborosíssimo, de tradição romana antiga.",
-        "vegetarian": false,
+        "vegetarian": true,
         "price": 21.55,
         "imageUrl": "https://i.imgur.com/ZcCQFZZ.jpeg",
         "category": "entrances"

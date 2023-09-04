@@ -5,13 +5,13 @@ import styles from '../index.module.scss'
 import dishes from '@/database.json';
 
 type ListProductsProps = {
-    drinks: ProductType[]
+    entrances: ProductType[]
 }
 
 const Drinks: React.FC<ListProductsProps> = () => {
     const drinks = dishes.filter(dish => dish.category === 'drinks')
     return (
-        <div className={styles.container} id="drinks">
+        <div className={styles.container}>
             {drinks.map(product => (
                 <div key={product.id}>
                     <CardProduct
