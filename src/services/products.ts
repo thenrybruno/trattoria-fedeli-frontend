@@ -5,6 +5,7 @@ export type ProductType = {
     vegetarian: boolean
     price: number
     imageUrl: string
+    category: string
 }
 
 export const fetchProducts = async () => {

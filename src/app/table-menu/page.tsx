@@ -2,9 +2,12 @@ import Header from "@/src/components/Header";
 import styles from './TableMenu.module.scss';
 import { NextPage } from "next";
 import { ReactNode } from "react";
-import ListProducts from "@/src/components/ListProducts";
-import dishes from '../../../database.json';
 import Footer from "@/src/components/common/Footer";
+import Entrances from "@/src/components/ListProducts/Entrances";
+import MainDishes from "@/src/components/ListProducts/MainDishes";
+import Extras from "@/src/components/ListProducts/Extras";
+import Drinks from "@/src/components/ListProducts/Drinks";
+import Desserts from "@/src/components/ListProducts/Desserts";
 
 const TableMenu: NextPage = (props: {
     children?: ReactNode
@@ -16,7 +19,16 @@ const TableMenu: NextPage = (props: {
                 <h2>As melhores opções para o seu jantar!</h2>
                 <p>Navegue pelo nosso menu e descubra o melhor sabor para hoje!</p>
                 <div className={styles.menu}>
-                    {<ListProducts products={dishes}/>}
+                    {/* @ts-ignore */}
+                    <Entrances/>
+                    {/* @ts-ignore */}
+                    <MainDishes/>
+                    {/* @ts-ignore */}
+                    <Drinks/>
+                    {/* @ts-ignore */}
+                    <Desserts/>
+                    {/* @ts-ignore */}
+                    <Extras/>
                 </div>
             </main>
             <Footer/>
