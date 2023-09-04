@@ -1,12 +1,12 @@
 @import '@/src/styles/globals';
 
-.section    {
+.section {
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 
-.main{
+.main {
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -18,13 +18,13 @@
     text-align: center;
     width: 100%;
 
-    h2{
+    h2 {
         font-size: 48px;
         font-weight: 700;
         color: $light-red-color;
     }
 
-    p{
+    p {
         font-size: 20px;
         font-weight: 400;
         color: $dark-gray-color;
@@ -57,7 +57,7 @@
     width: 179px;
 }
 
-@media (max-width: 1236px)  {
+@media (max-width: 1236px) {
     .ul {
         gap: 5px;
     }
@@ -70,7 +70,7 @@
     }
 }
 
-@media  (max-width: 925px)  {
+@media (max-width: 925px) {
     .li {
         font-size: 12px;
         height: 28px;

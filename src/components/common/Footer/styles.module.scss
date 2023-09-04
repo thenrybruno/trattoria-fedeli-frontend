@@ -1,19 +1,19 @@
 @import '@/src/styles/_colors.scss';
 
-.footer{
+.footer {
     font-size: 14px;
     text-align: center;
     color: $text-color;
 }
 
-@media(max-width: 480px) {
-    .footer{
+@media (max-width: 480px) {
+    .footer {
         font-size: 10px;
     }
 }
 
-@media(max-width: 360px) {
-    .footer{
+@media (max-width: 360px) {
+    .footer {
         font-size: 8px;
     }
 }

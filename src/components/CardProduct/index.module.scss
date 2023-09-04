@@ -1,6 +1,6 @@
 @import '../../styles/globals.scss';
 
-.card{
+.card {
     width: 300px;
     display: flex;
     flex-direction: column;
@@ -9,7 +9,7 @@
     gap: 5px;
     background-color: $white-color;
 
-    h3{
+    h3 {
         font-size: 20px;
         color: $light-gray-color;
         display: grid;
@@ -21,7 +21,7 @@
         width: 200px;
     }
 
-    .details{
+    .details {
         font-size: 12px;
         font-weight: 400;
         color: $dark-gray-color;
@@ -33,7 +33,7 @@
         width: 220px;
     }
 
-    .price{
+    .price {
         font-size: 18px;
         font-weight: 700;
         color: $light-green-color;
@@ -41,7 +41,7 @@
         align-items: flex-end;
     }
 
-    .button_add_dish{
+    .button_add_dish {
         @include button;
         border-radius: 10px;
         width: 200px;
@@ -53,7 +53,7 @@
     }
 }
 
-.category   {
+.category {
     align-self: flex-end;
     margin-right: 60px;
     margin-bottom: -30px;
@@ -61,18 +61,18 @@
     width: 45px;
 }
 
-.image  {
+.image {
     width: 160px;
 }
 
-.value  {
+.value {
     font-size: 20px;
     color: $dark-green-color;
     margin-left: 2px;
     margin-bottom: -1px;
 }
 
-.remove_button{
+.remove_button {
     width: 30px;
     height: 30px;
     color: $text-color-light;
@@ -86,7 +86,7 @@
     border-bottom-left-radius: 5px;
 }
 
-.add_button{
+.add_button {
     width: 30px;
     height: 30px;
     color: $text-color-light;
@@ -99,7 +99,7 @@
     border-bottom-right-radius: 5px;
 }
 
-.number{
+.number {
     height: 30px;
     background-color: $color-backgroud;
     padding: 0 20px;
