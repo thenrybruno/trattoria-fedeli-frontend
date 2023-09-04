@@ -7,7 +7,8 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <section className={styles.container_1}>
-        <Image src={'/img/trattoria-logo-light.png'} alt='Trattoria Fedeli' width={597} height={157} />
+        <Image src={'/img/trattoria-logo-light.png'} alt='Trattoria Fedeli' width={597} height={157} className={styles.logo}/>
+        <Image src={'/img/trattoria-logo.png'} alt='Trattoria Fedeli' width={500} height={140} className={styles.logo_mobile}/>
       </section>
       <section className={styles.container_2}>
         <h2>Boas vindas à Trattoria Fedeli!</h2>

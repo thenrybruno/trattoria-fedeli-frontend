@@ -7,12 +7,13 @@ export default function Register() {
     return (
         <main className={styles.main}>
             <section className={styles.container_1}>
-                <Image src={'/img/trattoria-logo-light.png'} alt='Trattoria Fedeli' width={597} height={157} />
+                <Image src={'/img/trattoria-logo-light.png'} alt='Trattoria Fedeli' width={597} height={157} className={styles.logo} />
+                <Image src={'/img/trattoria-logo.png'} alt='Trattoria Fedeli' width={500} height={140} className={styles.logo_mobile} />
             </section>
             <section className={styles.container_2}>
                 <h2>Crie sua conta abaixo!</h2>
                 <form>
-                <div className={styles.flex_input}>
+                    <div className={styles.flex_input}>
                         <label htmlFor="name">Nome Completo</label>
                         <input type="text" name="name" id="name" className={styles.input_name} />
                     </div>
@@ -26,7 +27,7 @@ export default function Register() {
                     </div>
                 </form>
                 <button className={styles.button}>Fazer login</button>
-                <Link href={'/order/deliveryOrder'} className={styles.back_text}>Voltar</Link>
+                <Link href={'/order/delivery-order'} className={styles.back_text}>Voltar</Link>
                 <div className={styles.politic}>
                     <p>
                         Ao utilizar nosso sistema, você concorda com nossas

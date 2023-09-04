@@ -1,7 +1,7 @@
 'use client'
 import { useCommand } from "../../hooks/useMenu"
 import { ProductType } from "../../services/products"
-import React from "react"
+import React, {useState} from "react"
 import styles from './index.module.scss'
 
 
@@ -11,7 +11,7 @@ type CardProductsProps = {
 
 const CardProduct: React.FC<CardProductsProps> = ({ product }) =>{
     const { name, details, price, imageUrl } = product
-    const { addProduct } = useCommand()
+    const { addProduct, removeProduct } = useCommand()
 
     return(
         <div className={styles.card}>
@@ -21,9 +21,17 @@ const CardProduct: React.FC<CardProductsProps> = ({ product }) =>{
             <p className={styles.price}>
                 R$ {price}
                 <span>
-                    <button className={styles.remove_button}>-</button>
-                    <span className={styles.number}>{1}</span>
-                    <button className={styles.add_button}>+</button>
+                    <button className={styles.remove_button} onClick={() => {
+                        removeProduct(product.id)
+                    }}>
+                        -
+                    </button>
+                    <span className={styles.number}>1</span>
+                    <button className={styles.add_button} onClick={() =>{
+                        addProduct(product)
+                    }}>
+                        +
+                    </button>
                 </span>
             </p>
             <button className={styles.button_add_dish} onClick={ () => {

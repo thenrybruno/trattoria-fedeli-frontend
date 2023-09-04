@@ -7,7 +7,8 @@ export default function DeliveryOrder() {
     return (
         <main className={styles.main}>
             <section className={styles.container_1}>
-                <Image src={'/img/trattoria-logo-light.png'} alt='Trattoria Fedeli' width={597} height={157} />
+                <Image src={'/img/trattoria-logo-light.png'} alt='Trattoria Fedeli' width={597} height={157} className={styles.logo} />
+                <Image src={'/img/trattoria-logo.png'} alt='Trattoria Fedeli' width={500} height={140} className={styles.logo_mobile} />
             </section>
             <section className={styles.container_2}>
                 <h2>Faça seu login no site!</h2>
@@ -23,8 +24,8 @@ export default function DeliveryOrder() {
                 </form>
                 <button className={styles.button}>Fazer login</button>
                 <p>
-                    Ou, crie sua conta 
-                    <Link href={'/order/deliveryOrder/register'}><span> aqui!</span></Link>
+                    Ou, crie sua conta
+                    <Link href={'/delivery-order/register'}><span> aqui!</span></Link>
                 </p>
                 <Link href={'/order'} className={styles.back_text}>Voltar</Link>
                 <div className={styles.politic}>
