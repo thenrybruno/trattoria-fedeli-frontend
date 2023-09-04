@@ -27,7 +27,7 @@ export default function Register() {
                     </div>
                 </form>
                 <button className={styles.button}>Fazer login</button>
-                <Link href={'/order/delivery-order'} className={styles.back_text}>Voltar</Link>
+                <Link href={'/delivery-order'} className={styles.back_text}>Voltar</Link>
                 <div className={styles.politic}>
                     <p>
                         Ao utilizar nosso sistema, você concorda com nossas
