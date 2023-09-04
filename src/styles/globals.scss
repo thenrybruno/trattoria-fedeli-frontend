@@ -1,2 +1,28 @@
 @import './colors';
 @import './mixins';
+
+.active {
+    background-color: $light-green-color;
+    color: $selector;
+}
+
+#entrances  {
+    display: flex;
+    padding: 20px 0px;
+}
+
+#mainDishes {
+    display: none;
+}
+
+#desserts   {
+    display: none;
+}
+
+#drinks {
+    display: none;
+}
+
+#extras {
+    display: none;
+}

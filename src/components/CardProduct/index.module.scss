@@ -2,43 +2,62 @@
 
 .card{
     width: 300px;
-    height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 5px;
     background-color: $white-color;
-    padding: 20px;
 
     h3{
         font-size: 20px;
         color: $light-gray-color;
+        display: grid;
+        place-content: center;
         font-weight: 700;
+        height: 60px;
         text-align: center;
+        margin: -10px auto;
+        width: 200px;
     }
 
     .details{
         font-size: 12px;
         font-weight: 400;
         color: $dark-gray-color;
+        display: grid;
+        place-content: center;
         text-align: center;
+        height: 65px;
+        margin: 10px auto;
+        width: 220px;
     }
 
     .price{
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 700;
         color: $light-green-color;
+        display: flex;
+        align-items: flex-end;
     }
 
     .button_add_dish{
+        @include button;
+        border-radius: 10px;
         width: 200px;
         height: 35px;
         border: none;
         font-size: 16px;
         font-weight: 700;
-        @include button
+        margin-top: 10px;
     }
+}
+
+.value  {
+    font-size: 20px;
+    color: $dark-green-color;
+    margin-left: 2px;
+    margin-bottom: -1px;
 }
 
 .remove_button{

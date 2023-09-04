@@ -19,8 +19,8 @@ const CardProduct: React.FC<CardProductsProps> = ({ product }) =>{
             <h3>{name}</h3>
             <p className={styles.details}>{details}</p>
             <p className={styles.price}>
-                R$ {price}
-                <span>
+                R$ <caption className={styles.value}>{price}</caption>
+                <span className={styles.span}>
                     <button className={styles.remove_button} onClick={() => {
                         removeProduct(product.id)
                     }}>

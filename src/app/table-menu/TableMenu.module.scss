@@ -1,12 +1,13 @@
-@import '/src/styles/colors';
+@import '@/src/styles/globals';
 
 .main{
     display: flex;
     flex-direction: column;
+    gap: 40px;
     align-items: center;
     padding-top: 20px;
     background-color: $color-backgroud;
-    margin-bottom: 30px;
+    margin: 0px 140px;
 
     h2{
         font-size: 48px;
@@ -20,3 +21,26 @@
         color: $dark-gray-color;
     }
 }
+
+.ul {
+    align-items: center;
+    display: flex;
+    color: $light-green-color;
+    font-size: 20px;
+    font-weight: bold;
+    gap: 10px;
+    margin-bottom: -40px;
+}
+
+.li {
+    background-color: $selector;
+    border-radius: 15px 15px 0px 0px;
+    cursor: pointer;
+    display: grid;
+    list-style-type: none;
+    height: 44px;
+    place-content: center;
+    text-align: center;
+    width: 179px;
+}
+

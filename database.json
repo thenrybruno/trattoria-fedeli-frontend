@@ -11,7 +11,7 @@
     {
         "id": 2,
         "name": "Bruschetta di Mozzarella",
-        "details": "Pães italianos tostados, acompanhados de mozzarella e molho sugo.",
+        "details": "Pães italianos tostados, acompanhados de queijo mozzarella e molho sugo.",
         "vegetarian": true,
         "price": 20.95,
         "imageUrl": "https://i.imgur.com/gfgkpDX.jpeg",
