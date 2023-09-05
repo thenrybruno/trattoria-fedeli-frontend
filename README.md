@@ -4,7 +4,7 @@
 
 ## About The Project
 This application contains the front-end side of the Trattoria Fedeli project. It's meant to be a showing site for the project's data that comes from the back-end and the database.
-You can check its <a href="">Figma mockup</a> too.
+You can check its <a href="https://www.figma.com/file/vZJZKZspo13MtoJf2AmpEJ/Trattoria--Fedeli?type=design&node-id=0%3A1&mode=design&t=cQW2bad4eWiyar8P-1">Figma mockup</a> and <a href="https://github.com/daviebatista/trattoria-fedeli-backend">Back-end side</a> too.
 
 ## Features
 - Cart
