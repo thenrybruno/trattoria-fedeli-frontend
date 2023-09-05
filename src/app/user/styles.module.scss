@@ -1,18 +1,22 @@
 @import '@/src/styles/globals';
 
 .main   {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     padding: 80px 140px;
 }
 
 .dashboard  {
     background-color: $white-color;
     border-radius: 15px;
-    margin: 20px 0px;
     padding: 20px 0px;
 }
 
 .h1 {
+    color: $light-green-color;
     font-size: 40px;
+    margin-bottom: 20px;
 }
 
 .tr {
@@ -71,4 +75,69 @@
 
 .thumbnail  {
     width: 60px;
+}
+
+@media  (max-width: 1220px) {
+    .main   {
+        padding: 80px 100px;
+    }
+
+    .tr {
+        h6  {
+            width: 180px;
+        }
+    }
+    .divide {
+        font-size: 10px;
+        width: 180px;
+    }
+
+    .dashboard  {
+        padding: 20px 40px;
+    }
+
+    .thumbnail  {
+        width: 40px;
+    }
+
+    .button {
+        font-size: 14px;
+        height: 15px;
+        width: 15px;
+    }
+}
+
+@media  (max-width: 768px)  {
+    .h1 {
+        font-size: 30px;
+    }
+
+    .main   {
+        padding: 60px 30px;
+    }
+
+    .dashboard  {
+        padding: 20px;
+    }
+
+    .tr {
+        h6  {
+            width: 140px;
+        }
+    }
+
+    .divide {
+        font-size: 8px;
+        width: 120px;
+    }
+
+    .thumbnail  {
+        width: 30px;
+    }
+}
+
+@media  (max-width: 425px)  {
+    .main   {
+        padding: 60px 5px;
+    }
 }

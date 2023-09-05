@@ -7,6 +7,7 @@ import { ReactNode, useEffect, useState } from 'react'
 import Footer from '@/src/components/common/Footer'
 import { ProductType } from '@/src/services/products'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 type CommandEntry = {
     product: ProductType
@@ -52,6 +53,7 @@ const TableRow = (props: {
     entry: CommandEntry
 })  =>  {
     const [command, setCommand] = useState<ProductType[]>([])
+    const router = useRouter()
 
     useEffect(() =>{
         const storedCommand = localStorage.getItem('command')
@@ -65,6 +67,7 @@ const TableRow = (props: {
         const updateCart = [...command, product]
         localStorage.setItem('command', JSON.stringify(updateCart))
         setCommand(updateCart)
+        router.refresh()
     }
 
     const removeProduct = (productId: number) =>{
@@ -75,6 +78,7 @@ const TableRow = (props: {
             updatedCart.splice(productIndex, 1)
             localStorage.setItem('command', JSON.stringify(updatedCart))
             setCommand(updatedCart)
+            router.refresh()
         }
     }
 
@@ -91,13 +95,19 @@ const TableRow = (props: {
             </span>
             <span className={styles.divide}>
                 <p>
-                    R$ {(props.entry.product.price * props.entry.quantity)}
+                    R$ {(props.entry.product.price * props.entry.quantity).toFixed(2)}
                 </p>
                 <span className={styles.buttons}>
-                    <button className={styles.button + " " + styles.add} onClick={()=> addProduct(props.entry.product)}>
+                    <button className={styles.button + " " + styles.add} onClick={()=> {
+                            addProduct(props.entry.product)
+                        }
+                    }>
                         +
                     </button>
-                    <button className={styles.button + " " + styles.remove} onClick={()=> removeProduct(props.entry.product.id)}>
+                    <button className={styles.button + " " + styles.remove} onClick={()=> {
+                            removeProduct(props.entry.product.id)
+                        }
+                    }>
                         -
                     </button>
                 </span>
