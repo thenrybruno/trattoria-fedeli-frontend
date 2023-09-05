@@ -29,7 +29,7 @@ export default function TableOrder() {
                 atHome
             }
 
-            sessionStorage.setItem('user', JSON.stringify(user))
+            localStorage.setItem('user', JSON.stringify(user))
             isLoggedIn = true
             sessionStorage.setItem('isLoggedIn', JSON.stringify(isLoggedIn))
             router.push('/table-menu')

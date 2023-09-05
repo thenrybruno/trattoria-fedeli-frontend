@@ -21,6 +21,42 @@
     }
 }
 
+.userButton {
+    align-items: center;
+    color: $white-color;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+
+    p   {
+        font-size: 18px;
+    }
+}
+
+.options    {
+    background-color: $light-red-color;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 118px;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 15px 10px;
+    position: absolute;
+    width: 156px;
+}
+
+.menuItem   {
+    color: $white-color;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+    gap: 10px;
+}
+
 @media(max-width: 768px){
     .header{
         .logo{
@@ -47,4 +83,12 @@
             height: 25px;
         }
     }
+}
+
+.hidden {
+    display: none;
+}
+
+.visible    {
+    display: flex;
 }

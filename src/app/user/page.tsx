@@ -32,7 +32,8 @@ const UserDashboard: NextPage = (props: { children?: ReactNode, entry?: CommandE
         <section className={styles.section}>
             <Header />
             <main className={styles.main}>
-                <h1 className={styles.h1}>Meu pedido</h1>
+                <h1 className={styles.h1}>Minha comanda</h1>
+                <p>Acompanhe seu pedido de perto!</p>
                 <section className={styles.dashboard}>
                     {
                         command.length < 1 ?
@@ -118,9 +119,7 @@ const TableRow = (props: {
     )
 }
 
-export default UserDashboard
-
-export function CommandProduct()    {
+function CommandProduct()    {
     const [ commandEntries, setCommandEntries ] = useState<CommandEntry[]>([])
     const [command, setCommand] = useState<ProductType[]>([])
 
@@ -170,3 +169,5 @@ export function CommandProduct()    {
         </section>
     )
 }
+
+export default UserDashboard

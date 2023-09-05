@@ -13,11 +13,9 @@ export default function Home() {
                     alt="Trattoria Fedeli"
                     className={styles.logo}
                 />
-                <Image
+                <img
                     src={'/img/trattoria-logo.png'}
                     alt="Trattoria Fedeli"
-                    width={500}
-                    height={140}
                     className={styles.logo_mobile}
                 />
             </section>
