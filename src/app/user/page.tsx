@@ -25,6 +25,8 @@ const UserDashboard: NextPage = (props: { children?: ReactNode, entry?: CommandE
         }
     }, [])
 
+    
+
 
     return (
         <section className={styles.section}>
