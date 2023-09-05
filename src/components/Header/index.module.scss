@@ -97,6 +97,9 @@
             width: 240px;
         }
     }
+    .menuItem   {
+        font-size: 10px;
+    }
 }
 
 @media(max-width: 768px){
@@ -127,6 +130,15 @@
             width: 150px;
         }
     }
+
+    .menuItem   {
+        .icon   {
+            height: 15px;
+            width: 15px;
+        }
+    }
+
+
 }
 
 @media(max-width: 550px){
@@ -176,15 +188,35 @@
         width: 12px;
     }
 
+    .menuItem   {
+        gap: 2px;
+        .icon   {
+            height: 12px;
+            width: 12px;
+        }
+    }
+
     .triangle   {
         height: 5px;
         width: 5px;
+    }
+
+    .options    {
+        width: 100px;
+    }
+
+    .menuItem   {
+        font-size: 8px;
     }
 }
 
 @media  (max-width: 425px)  {
     .header {
         padding: 5px 10px;
+    }
+
+    .options    {
+        width: 80px;
     }
 }
 
