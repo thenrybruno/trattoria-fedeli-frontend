@@ -20,3 +20,31 @@
         padding: 0 20px;
     }
 }
+
+@media(max-width: 768px){
+    .header{
+        .logo{
+            width: 150px;
+            height: 40px;
+        }
+    
+        input{
+            width: 250px;
+            height: 35px;
+        }
+    }
+}
+
+@media(max-width: 550px){
+    .header{
+        .logo{
+            width: 120px;
+            height: 30px;
+        }
+    
+        input{
+            width: 130px;
+            height: 25px;
+        }
+    }
+}
