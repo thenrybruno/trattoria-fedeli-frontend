@@ -6,6 +6,7 @@ import { NextPage } from 'next'
 import { ReactNode, useEffect, useState } from 'react'
 import Footer from '@/src/components/common/Footer'
 import { ProductType } from '@/src/services/products'
+import Link from 'next/link'
 
 type CommandEntry = {
     product: ProductType
@@ -33,7 +34,7 @@ const UserDashboard: NextPage = (props: { children?: ReactNode, entry?: CommandE
                     {
                         command.length < 1 ?
                         <div className={styles.empty}>
-                            <h1>Oh não! Você ainda não pediu nada. Que tal ver o cardápio?</h1>
+                            <h1>Oh não! Você ainda não pediu nada. Que tal ver o <Link href={'/table-menu'}>cardápio?</Link></h1>
                         </div>
                         :
                         <div>
@@ -60,6 +61,12 @@ const TableRow = (props: {
         }
     }, [])
 
+    const addProduct = (product: ProductType) =>{
+        const updateCart = [...command, product]
+        localStorage.setItem('command', JSON.stringify(updateCart))
+        setCommand(updateCart)
+    }
+
     const removeProduct = (productId: number) =>{
         const productIndex = command.findIndex(product => product.id === productId)
 
@@ -83,7 +90,17 @@ const TableRow = (props: {
                 {props.entry.quantity}
             </span>
             <span className={styles.divide}>
-            R$ {(props.entry.product.price * props.entry.quantity)}
+                <p>
+                    R$ {(props.entry.product.price * props.entry.quantity)}
+                </p>
+                <span className={styles.buttons}>
+                    <button className={styles.button + " " + styles.add} onClick={()=> addProduct(props.entry.product)}>
+                        +
+                    </button>
+                    <button className={styles.button + " " + styles.remove} onClick={()=> removeProduct(props.entry.product.id)}>
+                        -
+                    </button>
+                </span>
             </span>
         </div>
     )

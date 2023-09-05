@@ -1,7 +1,14 @@
 @import '@/src/styles/globals';
 
 .main   {
-    padding-top: 80px;
+    padding: 80px 140px;
+}
+
+.dashboard  {
+    background-color: $white-color;
+    border-radius: 15px;
+    margin: 20px 0px;
+    padding: 20px 0px;
 }
 
 .h1 {
@@ -27,8 +34,39 @@
     align-items: center;
     display: flex;
     font-size: 12px;
+    gap: 5px;
     padding: 5px 0px;
     width: 220px;
+
+    p   {
+        width: 80px;
+    }
+}
+
+.buttons    {
+    display: flex;
+    gap: 3px;
+}
+
+.button {
+    border: none;
+    border-radius: 2px;
+    color: $white-color;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    display: grid;
+    height: 20px;
+    place-content: center;
+    width: 20px;
+}
+
+.add    {
+    background-color: $light-green-color;
+}
+
+.remove {
+    background-color: $light-red-color;
 }
 
 .thumbnail  {
