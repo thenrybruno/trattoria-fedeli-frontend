@@ -32,7 +32,7 @@ export default function TableOrder() {
             localStorage.setItem('user', JSON.stringify(user))
             isLoggedIn = true
             sessionStorage.setItem('isLoggedIn', JSON.stringify(isLoggedIn))
-            router.push('/')
+            router.push('/table-menu')
         }
     }
 
