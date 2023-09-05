@@ -3,20 +3,8 @@ import Image from 'next/image'
 import styles from './page.module.scss'
 import Footer from '@/src/components/common/Footer'
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
-import { useEffect } from 'react'
 
 export default function Home() {
-    const router = useRouter()
-
-    useEffect(() => {
-        if (!sessionStorage.getItem('isLoggedIn')) {
-            router.push('/')
-        } else {
-            router.push('/table-menu')
-        }
-    }, [])
-
     return (
         <main className={styles.main}>
             <section className={styles.container_1}>

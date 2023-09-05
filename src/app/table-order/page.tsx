@@ -9,11 +9,6 @@ export default function TableOrder() {
     const router = useRouter()
     let isLoggedIn: boolean = true
 
-    //@ts-ignore
-    if (sessionStorage.getItem('isLoggedIn')) {
-        router.push('/table-menu')
-    }
-
     function formAuth() {
         //@ts-ignore
         const name: any = document.getElementById('name')?.value.length

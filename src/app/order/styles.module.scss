@@ -1,27 +1,18 @@
 @import '@/src/styles/globals';
 
 .main {
-    display: flex;
-    width: 100%;
-    min-height: 100vh;
+    @include main;
 }
 
 .logo {
-    display: block;
-    position: sticky;
-    top: 42%;
-    width: 400px;
+    @include logo;
 }
 
 .logo_mobile {
-    display: none;
+    @include logo_mobile;
 }
 
 .button {
-    width: 640px;
-    height: 70px;
-    border: none;
-    font-size: 35px;
     @include button;
 }
 
@@ -37,109 +28,7 @@
     @include politics;
 }
 
-@media (max-width: 1440px) {
-    .button {
-        font-size: 30px;
-        height: 60px;
-        width: 500px;
-    }
-}
-
-//responsividade
-@media (max-width: 1300px) {
-    .button {
-        font-size: 24px;
-        height: 60px;
-        width: 460px;
-    }
-
-    .logo {
-        width: 500px;
-    }
-}
-
-@media (max-width: 1100px) {
-    .button {
-        width: 400px;
-        height: 60px;
-        font-size: 25px;
-    }
-
-    .logo {
-        width: 400px;
-        height: 120px;
-    }
-}
-
-@media (max-width: 850px) {
-    .button {
-        width: 300px;
-        height: 50px;
-        font-size: 22px;
-    }
-
-    .logo {
-        width: 300px;
-        height: 100px;
-    }
-}
-
-@media (max-width: 768px) {
-    .main {
-        background-color: $white-color;
-        flex-direction: column;
-    }
-
-    .button {
-        border-radius: 20px;
-        width: 580px;
-        height: 80px;
-        font-size: 36px;
-    }
-
-    .logo {
-        display: none;
-    }
-
-    .logo_mobile {
-        display: block;
-    }
-}
-
-@media (max-width: 620px) {
-    .button {
-        width: 450px;
-        height: 60px;
-        font-size: 30px;
-    }
-
-    .logo_mobile {
-        width: 400px;
-        height: 100px;
-    }
-}
-
 @media (max-width: 480px) {
-    .button {
-        border-radius: 10px;
-        width: 330px;
-        height: 45px;
-        font-size: 20px;
-    }
-
-    .logo_mobile {
-        width: 330px;
-        height: 80px;
-    }
-
-    .politic {
-        font-size: 12px;
-
-        span {
-            font-size: 12px;
-        }
-    }
-
     .container_2 {
         h2 {
             font-size: 35px;

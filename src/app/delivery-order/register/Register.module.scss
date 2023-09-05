@@ -1,26 +1,18 @@
 @import '@/src/styles/globals.scss';
 
 .main {
-    display: flex;
-    width: 100vw;
-    min-height: 100vh;
+    @include main;
 }
 
 .logo {
-    display: block;
-    position: sticky;
-    top: 42%;
-    width: 400px;
+    @include logo;
 }
 
 .logo_mobile {
-    display: none;
+    @include logo_mobile;
 }
 
 .button {
-    width: 640px;
-    height: 70px;
-    font-size: 35px;
     @include button;
 }
 
@@ -89,85 +81,7 @@
     @include politics;
 }
 
-//responsividade
-@media (max-width: 1300px) {
-    .button {
-        width: 540px;
-    }
-
-    .logo {
-        width: 500px;
-    }
-
-    .container_2 {
-        form {
-            input {
-                width: 500px;
-            }
-        }
-    }
-}
-
-@media (max-width: 1100px) {
-    .button {
-        width: 400px;
-        height: 60px;
-        font-size: 25px;
-    }
-
-    .logo {
-        width: 400px;
-        height: 120px;
-    }
-
-    .container_2 {
-        form {
-            input {
-                width: 400px;
-            }
-        }
-    }
-}
-
-@media (max-width: 850px) {
-    .button {
-        width: 300px;
-        height: 50px;
-        font-size: 22px;
-    }
-
-    .logo {
-        width: 300px;
-        height: 100px;
-    }
-
-    .container_2 {
-        h2 {
-            font-size: 40px;
-        }
-
-        form {
-            font-size: 18px;
-
-            input {
-                width: 300px;
-            }
-        }
-    }
-}
-
 @media (max-width: 768px) {
-    .main {
-        background-color: $white-color;
-        flex-direction: column;
-    }
-
-    .button {
-        width: 580px;
-        height: 70px;
-        font-size: 40px;
-    }
-
     .container_1 {
         width: 100%;
         min-height: 40%;
@@ -209,11 +123,6 @@
         font-size: 30px;
     }
 
-    .logo_mobile {
-        width: 400px;
-        height: 100px;
-    }
-
     .container_2 {
         h2 {
             font-size: 30px;
@@ -234,17 +143,6 @@
 }
 
 @media (max-width: 480px) {
-    .button {
-        width: 330px;
-        height: 45px;
-        font-size: 20px;
-    }
-
-    .logo_mobile {
-        width: 310px;
-        height: 80px;
-    }
-
     .container_2 {
         h2 {
             font-size: 35px;
