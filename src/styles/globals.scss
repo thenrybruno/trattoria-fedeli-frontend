@@ -1,2 +1,7 @@
 @import './colors';
 @import './mixins';
+
+.active {
+    background-color: $light-green-color;
+    color: $selector;
+}

@@ -1,208 +1,220 @@
 @import '@/src/styles/globals.scss';
 
 .main {
-  display: flex;
-  min-height: 100vh;
+    display: flex;
+    min-height: 100vh;
 }
 
-.logo_mobile{
-  display: none;
+.logo {
+    display: block;
+    position: sticky;
+    width: 400px;
+}
+
+.logo_mobile {
+    display: none;
 }
 
 .button {
-  width: 640px;
-  height: 70px;
-  font-size: 35px;
-  @include button;
+    width: 640px;
+    height: 70px;
+    font-size: 35px;
+    @include button;
 }
 
 .container_1 {
-  width: 50%;
-  background: $light-red-color;
-  background: linear-gradient(100deg, $light-red-color 0%, $dark-red-color 100%);
-  display: grid;
-  place-content: center;
+    @include container_1;
 }
 
 .container_2 {
-  width: 50%;
-  background-color: $color-backgroud;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 130px 20px 0 20px;
-  gap: 40px;
+    @include container_2;
 
-  h2 {
-    font-family: 'Neuton';
-    font-size: 52px;
-    font-weight: 700;
-    color: $dark-green-color;
-    text-align: center;
-  }
-
-  span {
-    color: $dark-green-color;
-    font-size: 24px;
-    font-weight: 700;
-    border: none;
-  }
-
-  form {
-    font-size: 24px;
-    color: $dark-green-color;
-    font-weight: 700;
-
-    input {
-      background-color: $input-color;
-      border: none;
-      border-radius: 10px;
-      height: 50px;
+    h2 {
+        font-family: 'Neuton';
+        font-size: 52px;
+        font-weight: 700;
+        color: $dark-green-color;
+        text-align: center;
     }
 
-    .flex_input {
-      display: flex;
-      flex-direction: column;
+    span {
+        color: $dark-green-color;
+        font-size: 24px;
+        font-weight: 700;
+        border: none;
     }
 
-    .flex_input_2 {
-      display: flex;
-      gap: 20px;
-    }
+    form {
+        font-size: 24px;
+        color: $dark-green-color;
+        font-weight: 700;
 
-    .input_name {
-      width: 400px;
-    }
+        input {
+            background-color: $input-color;
+            border: none;
+            border-radius: 10px;
+            height: 50px;
+        }
 
-    .input_phone {
-      width: 200px;
-    }
+        .flex_input {
+            display: flex;
+            flex-direction: column;
+        }
 
-    .input_table {
-      width: 80px;
+        .flex_input_2 {
+            display: flex;
+            gap: 20px;
+        }
+
+        .input_name {
+            width: 400px;
+        }
+
+        .input_phone {
+            width: 200px;
+        }
+
+        .input_table {
+            width: 80px;
+        }
     }
-  }
 }
 
 .politic {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-weight: 600;
-  margin-bottom: 80px;
-  color: $text-color;
-  font-size: 15px;
-  text-align: center;
-
-  span {
-    color: $light-gray-color;
-    font-size: 15px;
-  }
-}
-
-//responsividade
-@media(max-width: 1300px) {
-  .button {
-    width: 540px;
-  }
-
-  .logo {
-    width: 500px;
-  }
-}
-
-@media(max-width: 1100px) {
-  .button {
-    width: 400px;
-    height: 60px;
-    font-size: 25px;
-  }
-
-  .logo {
-    width: 400px;
-    height: 120px;
-  }
-}
-
-@media(max-width: 850px) {
-  .button {
-    width: 300px;
-    height: 50px;
-    font-size: 22px;
-  }
-
-  .logo {
-    width: 300px;
-    height: 100px;
-  }
-
-  .container_2 {
-    h2 {
-      font-size: 40px;
-    }
-  }
-}
-
-@media(max-width: 768px) {
-  .main {
-    background-color: $white-color;
+    display: flex;
     flex-direction: column;
-  }
+    align-items: center;
+    font-weight: 600;
+    margin-bottom: 80px;
+    color: $text-color;
+    font-size: 15px;
+    text-align: center;
 
-  .button {
-    width: 580px;
-    height: 70px;
-    font-size: 40px;
-  }
-
-  .container_1 {
-    width: 100%;
-    min-height: 40%;
-    background: $white-color;
-    padding-top: 70px;
-  }
-
-  .container_2 {
-    width: 100%;
-    min-height: 60%;
-    background: $white-color;
-
-    h2{
-      margin-top: -40px;
+    span {
+        color: $light-gray-color;
+        font-size: 15px;
     }
-  }
-
-  .logo{
-    display: none;
-  }
-
-  .logo_mobile{
-    display: block;
-  }
 }
 
-@media(max-width: 620px){
-  .button {
-    width: 450px;
-    height: 60px;
-    font-size: 30px;
-  }
+@media (max-width: 1440px) {
+    .button {
+        border-radius: 10px;
+        font-size: 30px;
+        height: 60px;
+        width: 500px;
+    }
 
-  .logo_mobile{
-    width: 400px;
-    height: 100px;
-  }
+    .container_2 {
+        h2 {
+            font-size: 40px;
+        }
+    }
 }
 
-@media(max-width: 480px){
-  .button {
-    width: 330px;
-    height: 45px;
-    font-size: 20px;
-  }
+@media (max-width: 1300px) {
+    .button {
+        font-size: 24px;
+        height: 60px;
+        width: 460px;
+    }
 
-  .logo_mobile{
-    width: 330px;
-    height: 80px;
-  }
+    .logo {
+        width: 500px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .button {
+        width: 400px;
+        height: 60px;
+        font-size: 25px;
+    }
+
+    .logo {
+        width: 400px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 850px) {
+    .button {
+        width: 300px;
+        height: 50px;
+        font-size: 22px;
+    }
+
+    .logo {
+        width: 300px;
+        height: 100px;
+    }
+
+    .container_2 {
+        h2 {
+            font-size: 40px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .main {
+        background-color: $white-color;
+        flex-direction: column;
+    }
+
+    .button {
+        border-radius: 20px;
+        width: 580px;
+        height: 80px;
+        font-size: 36px;
+    }
+
+    .container_1 {
+        background: $white-color;
+        padding-top: 70px;
+        width: 100%;
+    }
+
+    .container_2 {
+        width: 100%;
+        min-height: 60%;
+        background: $white-color;
+
+        h2 {
+            margin-top: -40px;
+        }
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .logo_mobile {
+        display: block;
+    }
+}
+
+@media (max-width: 620px) {
+    .button {
+        width: 450px;
+        height: 60px;
+        font-size: 30px;
+    }
+
+    .logo_mobile {
+        width: 400px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .button {
+        width: 330px;
+        height: 45px;
+        font-size: 20px;
+    }
+
+    .logo_mobile {
+        width: 330px;
+        height: 80px;
+    }
 }

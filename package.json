@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "create": "npm install && npm run dev"
+    "create": "npm install && npm run dev",
+    "format": "prettier --write src/"
   },
   "dependencies": {
     "aos": "^2.3.4",
@@ -25,6 +26,7 @@
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
     "@types/react-modal": "^3.16.0",
+    "prettier": "^3.0.3",
     "sass": "^1.66.1",
     "typescript": "5.2.2"
   }

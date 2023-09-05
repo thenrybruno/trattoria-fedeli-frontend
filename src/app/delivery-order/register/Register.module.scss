@@ -6,6 +6,13 @@
     min-height: 100vh;
 }
 
+.logo {
+    display: block;
+    position: sticky;
+    top: 42%;
+    width: 400px;
+}
+
 .logo_mobile {
     display: none;
 }
@@ -18,26 +25,16 @@
 }
 
 .button:hover {
-    background: $dark-green-color ;
+    background: $dark-green-color;
     background: linear-gradient(100deg, $dark-green-color 0%, $light-green-color 100%);
 }
 
 .container_1 {
-    width: 50%;
-    background: $light-red-color;
-    background: linear-gradient(100deg, $light-red-color 0%, $dark-red-color 100%);
-    display: grid;
-    place-content: center;
+    @include container_1;
 }
 
 .container_2 {
-    width: 50%;
-    background-color: $color-backgroud;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 30px;
-    gap: 20px;
+    @include container_2;
 
     h2 {
         font-family: 'Neuton';
@@ -80,33 +77,20 @@
         font-size: 24px;
         font-weight: 700;
         margin-top: -10px;
-        transition: .3s;
+        transition: 0.3s;
     }
 
     .back_text:hover {
         color: $light-green-color;
     }
-
 }
 
 .politic {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-weight: 600;
-    margin-bottom: 10px;
-    color: $text-color;
-    font-size: 15px;
-    text-align: center;
-
-    span {
-        color: $light-gray-color;
-        font-size: 15px;
-    }
+    @include politics;
 }
 
 //responsividade
-@media(max-width: 1300px) {
+@media (max-width: 1300px) {
     .button {
         width: 540px;
     }
@@ -115,7 +99,7 @@
         width: 500px;
     }
 
-    .container_2{
+    .container_2 {
         form {
             input {
                 width: 500px;
@@ -124,7 +108,7 @@
     }
 }
 
-@media(max-width: 1100px) {
+@media (max-width: 1100px) {
     .button {
         width: 400px;
         height: 60px;
@@ -136,7 +120,7 @@
         height: 120px;
     }
 
-    .container_2{
+    .container_2 {
         form {
             input {
                 width: 400px;
@@ -145,7 +129,7 @@
     }
 }
 
-@media(max-width: 850px) {
+@media (max-width: 850px) {
     .button {
         width: 300px;
         height: 50px;
@@ -172,7 +156,7 @@
     }
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
     .main {
         background-color: $white-color;
         flex-direction: column;
@@ -218,7 +202,7 @@
     }
 }
 
-@media(max-width: 620px) {
+@media (max-width: 620px) {
     .button {
         width: 450px;
         height: 60px;
@@ -230,7 +214,7 @@
         height: 100px;
     }
 
-    .container_2{
+    .container_2 {
         h2 {
             font-size: 30px;
         }
@@ -249,7 +233,7 @@
     }
 }
 
-@media(max-width: 480px) {
+@media (max-width: 480px) {
     .button {
         width: 330px;
         height: 45px;
@@ -261,7 +245,7 @@
         height: 80px;
     }
 
-    .container_2{
+    .container_2 {
         h2 {
             font-size: 35px;
         }
@@ -272,17 +256,16 @@
             .input_name {
                 width: 310px;
             }
-    
+
             .input_phone {
                 width: 180px;
             }
-    
         }
     }
 
     .politic {
         font-size: 12px;
-    
+
         span {
             font-size: 12px;
         }

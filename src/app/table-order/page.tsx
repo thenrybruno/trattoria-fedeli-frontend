@@ -1,14 +1,51 @@
+'use client'
 import Image from 'next/image'
 import styles from './TableOrder.module.scss'
 import Footer from '@/src/components/common/Footer'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 export default function TableOrder() {
+    const router = useRouter()
+    let isLoggedIn: boolean = true
+
+    //@ts-ignore
+    if (sessionStorage.getItem('isLoggedIn')) {
+        router.push('/table-menu')
+    }
+
+    function formAuth() {
+        //@ts-ignore
+        const name: any = document.getElementById('name')?.value.length
+        //@ts-ignore
+        const table: any = document.getElementById('table')?.value.length
+        //@ts-ignore
+        const cellphone: any = document.getElementById('cel-phone')?.value.length
+
+        if (name < 3 || table < 1 || cellphone < 10) {
+            alert('Insira valores válidos no formulário!')
+        } else {
+            isLoggedIn = true
+            sessionStorage.setItem('isLoggedIn', JSON.stringify(isLoggedIn))
+            router.push('/table-menu')
+        }
+    }
+
     return (
         <main className={styles.main}>
             <section className={styles.container_1}>
-                <Image src={'/img/trattoria-logo-light.png'} alt='Trattoria Fedeli' width={597} height={157} className={styles.logo} />
-                <Image src={'/img/trattoria-logo.png'} alt='Trattoria Fedeli' width={500} height={140} className={styles.logo_mobile} />
+                <img
+                    src={'/img/trattoria-logo-light.png'}
+                    alt="Trattoria Fedeli"
+                    className={styles.logo}
+                />
+                <Image
+                    src={'/img/trattoria-logo.png'}
+                    alt="Trattoria Fedeli"
+                    width={500}
+                    height={140}
+                    className={styles.logo_mobile}
+                />
             </section>
             <section className={styles.container_2}>
                 <h2>Preencha os campos abaixo!</h2>
@@ -20,25 +57,40 @@ export default function TableOrder() {
                     <div className={styles.flex_input_2}>
                         <div className={styles.flex_input}>
                             <label htmlFor="cel-phone">Nº Celular:</label>
-                            <input type="number" name="cel-phone" id="cel-phone" className={styles.input_phone} />
+                            <input
+                                type="number"
+                                name="cel-phone"
+                                id="cel-phone"
+                                className={styles.input_phone}
+                            />
                         </div>
                         <div className={styles.flex_input}>
                             <label htmlFor="table">Nº Mesa:</label>
-                            <input type="number" name="table" id="table" className={styles.input_table} />
+                            <input
+                                type="number"
+                                name="table"
+                                id="table"
+                                className={styles.input_table}
+                                max={30}
+                            />
                         </div>
                     </div>
+                    <button
+                        className={styles.button}
+                        onClick={(ev) => {
+                            ev.preventDefault()
+                            formAuth()
+                        }}
+                    >
+                        Prosseguir
+                    </button>
                 </form>
-                <Link href={'/table-menu'}>
-                    <button className={styles.button}>Prosseguir</button>
+                <Link href={'/order'} className={styles.back_text}>
+                    Voltar
                 </Link>
-                <Link href={'/order'} className={styles.back_text}>Voltar</Link>
                 <div className={styles.politic}>
-                    <p>
-                        Ao utilizar nosso sistema, você concorda com nossas
-                    </p>
-                    <span>
-                        Políticas de Privacidade.
-                    </span>
+                    <p>Ao utilizar nosso sistema, você concorda com nossas</p>
+                    <span>Políticas de Privacidade.</span>
                 </div>
                 <Footer />
             </section>

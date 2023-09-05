@@ -1,22 +1,114 @@
-@import '/src/styles/colors';
+@import '@/src/styles/globals';
 
-.main{
+.section {
     display: flex;
     flex-direction: column;
+    gap: 30px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
     align-items: center;
+    align-self: center;
     padding-top: 20px;
     background-color: $color-backgroud;
-    margin-bottom: 30px;
+    padding: 100px 140px 0px 140px;
+    text-align: center;
+    width: 100%;
 
-    h2{
+    h2 {
         font-size: 48px;
         font-weight: 700;
         color: $light-red-color;
     }
 
-    p{
+    p {
         font-size: 20px;
         font-weight: 400;
         color: $dark-gray-color;
+    }
+}
+
+.productSection {
+    width: 100%;
+}
+
+.ul {
+    align-items: center;
+    display: flex;
+    font-weight: bold;
+    gap: 10px;
+    margin-bottom: -40px;
+}
+
+.li {
+    background-color: $selector;
+    border-radius: 15px 15px 0px 0px;
+    color: $light-green-color;
+    cursor: pointer;
+    display: grid;
+    font-size: 20px;
+    list-style-type: none;
+    height: 44px;
+    place-content: center;
+    text-align: center;
+    width: 179px;
+}
+
+@media (max-width: 1236px) {
+    .ul {
+        gap: 5px;
+    }
+
+    .li {
+        border-radius: 10px 10px 0px 0px;
+        font-size: 16px;
+        height: 38px;
+        width: 120px;
+    }
+}
+
+@media (max-width: 925px) {
+    .li {
+        font-size: 12px;
+        height: 28px;
+        width: 90px;
+    }
+}
+
+@media (max-width: 768px) {
+    .productSection {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-left: -220px;
+    }
+    .ul {
+        align-self: flex-start;
+        flex-direction: row-reverse;
+        gap: 15px;
+        transform: rotate(270deg);
+        margin-right: -225px;
+        margin-top: 260px;
+        height: 40px;
+        width: 480px;
+    }
+
+    .li {
+        font-size: 20px;
+        height: 44px;
+        width: 179px;
+    }
+
+    .main {
+        padding: 120px 0px;
+        width: 100%;
+
+        h2 {
+            font-size: 24px;
+        }
     }
 }

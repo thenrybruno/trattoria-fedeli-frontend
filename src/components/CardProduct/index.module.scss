@@ -1,47 +1,78 @@
 @import '../../styles/globals.scss';
 
-.card{
+.card {
     width: 300px;
-    height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 5px;
     background-color: $white-color;
-    padding: 20px;
 
-    h3{
+    h3 {
         font-size: 20px;
         color: $light-gray-color;
+        display: grid;
+        place-content: center;
         font-weight: 700;
+        height: 60px;
         text-align: center;
+        margin: -10px auto;
+        width: 200px;
     }
 
-    .details{
+    .details {
         font-size: 12px;
         font-weight: 400;
         color: $dark-gray-color;
+        display: grid;
+        place-content: center;
         text-align: center;
+        height: 65px;
+        margin: 10px auto;
+        width: 220px;
     }
 
-    .price{
-        font-size: 20px;
+    .price {
+        font-size: 18px;
         font-weight: 700;
         color: $light-green-color;
+        display: flex;
+        align-items: flex-end;
     }
 
-    .button_add_dish{
+    .button_add_dish {
+        @include button;
+        border-radius: 10px;
         width: 200px;
         height: 35px;
         border: none;
         font-size: 16px;
         font-weight: 700;
-        @include button
+        margin-top: 10px;
     }
 }
 
-.remove_button{
+.category {
+    align-self: flex-end;
+    margin-right: 60px;
+    margin-bottom: -30px;
+    position: relative;
+    width: 45px;
+}
+
+.image {
+    width: 160px;
+}
+
+.value {
+    font-size: 20px;
+    color: $dark-green-color;
+    margin-left: 2px;
+    margin-bottom: -1px;
+}
+
+.remove_button {
     width: 30px;
     height: 30px;
     color: $text-color-light;
@@ -55,7 +86,7 @@
     border-bottom-left-radius: 5px;
 }
 
-.add_button{
+.add_button {
     width: 30px;
     height: 30px;
     color: $text-color-light;
@@ -68,8 +99,32 @@
     border-bottom-right-radius: 5px;
 }
 
-.number{
+.number {
     height: 30px;
     background-color: $color-backgroud;
     padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 270px;
+    }
+
+    .image {
+        width: 120px;
+    }
+
+    .h3 {
+        width: 290px;
+    }
+
+    .details {
+        font-size: 10px;
+    }
+
+    .category {
+        margin-bottom: -20px;
+        margin-right: 40px;
+        width: 30px;
+    }
 }

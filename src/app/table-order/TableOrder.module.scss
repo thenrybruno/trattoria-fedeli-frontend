@@ -2,8 +2,15 @@
 
 .main {
     display: flex;
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
+}
+
+.logo {
+    bottom: 42%;
+    display: block;
+    position: sticky;
+    width: 400px;
 }
 
 .logo_mobile {
@@ -17,30 +24,21 @@
     @include button;
 }
 
-
 .container_1 {
-    width: 50%;
-    background: $light-red-color;
-    background: linear-gradient(100deg, $light-red-color 0%, $dark-red-color 100%);
-    display: grid;
-    place-content: center;
+    @include container_1;
 }
 
 .container_2 {
-    width: 50%;
-    background-color: $color-backgroud;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 50px;
-    gap: 30px;
+    @include container_2;
+
 
     h2 {
         font-family: 'Neuton';
-        font-size: 52px;
+        font-size: 44px;
         font-weight: 700;
         color: $dark-green-color;
         text-align: center;
+        width: 380px;
     }
 
     span {
@@ -70,6 +68,7 @@
 
         .flex_input_2 {
             display: flex;
+            justify-content: space-between;
             gap: 20px;
         }
 
@@ -82,6 +81,7 @@
         }
 
         .input_table {
+            margin-right: 20px;
             width: 100px;
         }
     }
@@ -91,13 +91,12 @@
         font-size: 24px;
         font-weight: 700;
         margin-top: -7px;
-        transition: .3s;
+        transition: 0.3s;
     }
 
     .back_text:hover {
         color: $light-green-color;
     }
-
 }
 
 .politic {
@@ -115,9 +114,17 @@
         font-size: 15px;
     }
 }
+@media (max-width: 1440px) {
+    .button {
+        border-radius: 10px;
+        font-size: 30px;
+        height: 55px;
+        width: 500px;
+    }
+}
 
 //responsividade
-@media(max-width: 1300px) {
+@media (max-width: 1300px) {
     .button {
         width: 540px;
     }
@@ -127,7 +134,7 @@
     }
 }
 
-@media(max-width: 1100px) {
+@media (max-width: 1100px) {
     .button {
         width: 400px;
         height: 60px;
@@ -139,16 +146,16 @@
         height: 120px;
     }
 
-    .container_2{
+    .container_2 {
         form {
             .input_name {
                 width: 400px;
             }
-    
+
             .input_phone {
                 width: 250px;
             }
-    
+
             .input_table {
                 width: 100px;
             }
@@ -156,7 +163,7 @@
     }
 }
 
-@media(max-width: 850px) {
+@media (max-width: 850px) {
     .button {
         width: 300px;
         height: 50px;
@@ -179,11 +186,11 @@
             .input_name {
                 width: 300px;
             }
-    
+
             .input_phone {
                 width: 200px;
             }
-    
+
             .input_table {
                 width: 80px;
             }
@@ -191,7 +198,7 @@
     }
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
     .main {
         background-color: $white-color;
         flex-direction: column;
@@ -200,7 +207,7 @@
     .button {
         width: 580px;
         height: 70px;
-        font-size: 40px;
+        font-size: 30px;
     }
 
     .container_1 {
@@ -225,11 +232,11 @@
             .input_name {
                 width: 500px;
             }
-    
+
             .input_phone {
                 width: 250px;
             }
-    
+
             .input_table {
                 width: 100px;
             }
@@ -245,11 +252,10 @@
     }
 }
 
-@media(max-width: 620px) {
+@media (max-width: 620px) {
     .button {
         width: 450px;
         height: 60px;
-        font-size: 30px;
     }
 
     .logo_mobile {
@@ -257,7 +263,7 @@
         height: 100px;
     }
 
-    .container_2{
+    .container_2 {
         h2 {
             font-size: 30px;
         }
@@ -268,11 +274,11 @@
             .input_name {
                 width: 400px;
             }
-    
+
             .input_phone {
                 width: 200px;
             }
-    
+
             .input_table {
                 width: 80px;
             }
@@ -284,9 +290,9 @@
     }
 }
 
-@media(max-width: 480px) {
+@media (max-width: 480px) {
     .button {
-        width: 330px;
+        width: 300px;
         height: 45px;
         font-size: 20px;
     }
@@ -296,9 +302,10 @@
         height: 80px;
     }
 
-    .container_2{
+    .container_2 {
         h2 {
             font-size: 35px;
+            width: 300px;
         }
 
         form {
@@ -307,17 +314,16 @@
             .input_name {
                 width: 310px;
             }
-    
+
             .input_phone {
                 width: 180px;
             }
-    
         }
     }
 
     .politic {
         font-size: 12px;
-    
+
         span {
             font-size: 12px;
         }
