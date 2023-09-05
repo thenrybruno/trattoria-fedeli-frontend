@@ -51,17 +51,17 @@ const Header = (props: { children?: ReactNode }) => {
             </div>
             <div className={styles.menu} onClick={() => setModalClass(modalClass == styles.hidden ? styles.visible : styles.hidden)}>
                 <div className={styles.userButton}>
-                    <Image src={'/header/person.svg'} width={25} height={25} alt='user-icon'/>
+                    <Image src={'/header/person.svg'} width={25} height={25} alt='user-icon' className={styles.icon}/>
                     <p>{user?.name}</p>
-                    <Image src={'/header/triangle.svg'} width={10} height={10} alt='user-icon'/>
+                    <Image src={'/header/triangle.svg'} width={10} height={10} alt='user-icon' className={styles.triangle}/>
                 </div>
                 <span className={styles.options + ' ' + modalClass} >
                     <Link href={'/user'} className={styles.menuItem}>
-                        <Image src={'/header/command.svg'} width={25} height={25} alt='user-icon'/>
+                        <Image src={'/header/command.svg'} width={25} height={25} alt='user-icon' className={styles.icon} />
                         <p>Comanda</p>
                     </Link>
                     <span className={styles.menuItem} onClick={()=> handleDisconnect()}>
-                        <Image src={'/header/quit.svg'} width={25} height={25} alt='user-icon'/>
+                        <Image src={'/header/quit.svg'} width={25} height={25} alt='user-icon' className={styles.icon} />
                         <p>Sair</p>
                     </span>
                 </span>

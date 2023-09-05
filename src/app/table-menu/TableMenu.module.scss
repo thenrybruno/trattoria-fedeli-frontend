@@ -1,7 +1,5 @@
 @import '@/src/styles/globals';
 
-
-
 .section {
     display: flex;
     flex-direction: column;
@@ -94,7 +92,7 @@
         flex-direction: row-reverse;
         gap: 15px;
         transform: rotate(270deg);
-        margin-right: -225px;
+        margin-right: -218px;
         margin-top: 260px;
         height: 40px;
         width: 480px;
@@ -112,6 +110,10 @@
 
         h2 {
             font-size: 24px;
+        }
+
+        p   {
+            font-size: 14px;
         }
     }
 }

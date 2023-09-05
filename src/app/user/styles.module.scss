@@ -82,6 +82,16 @@
     width: 60px;
 }
 
+.total  {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: space-between;
+    padding: 0px 2%;
+    width: 100%;
+
+}
+
 @media  (max-width: 1220px) {
     .main   {
         padding: 80px 100px;

@@ -33,6 +33,8 @@
     }
 }
 
+
+
 .search {
     background-color: $dark-green-color;
     border-radius: 50%;
@@ -84,10 +86,13 @@
         .logo{
             width: 150px;
         }
-    
+    }
+
+    .searchBar  {
+        width: 200px;
+
         input{
-            width: 250px;
-            height: 35px;
+            width: 150px;
         }
     }
 }
@@ -95,13 +100,46 @@
 @media(max-width: 550px){
     .header{
         .logo{
-            width: 120px;
+            width: 80px;
         }
     
         input{
             width: 130px;
             height: 25px;
         }
+    }
+
+    .searchBar  {
+        height: 20px;
+        width: 150px;
+
+        input{
+            height: 10px;
+            width: 100px;
+        }
+    }
+
+    .search {
+        padding: 2px;
+        height: 15px;
+        width: 15px;
+    }
+
+    .userButton   {
+        p   {
+            font-size: 8px;
+
+        }
+    }
+
+    .icon   {
+        height: 12px;
+        width: 12px;
+    }
+
+    .triangle   {
+        height: 5px;
+        width: 5px;
     }
 }
 

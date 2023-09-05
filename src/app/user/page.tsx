@@ -45,6 +45,7 @@ const UserDashboard: NextPage = (props: { children?: ReactNode, entry?: CommandE
                             <CommandProduct/>
                         </div>
                     }
+                <CommandTotal/>
                 </section>
             </main>
             <Footer />
@@ -167,6 +168,25 @@ function CommandProduct()    {
                 {commandEntries.map(entry => <TableRow key={entry.product.id} entry={entry} />)}
             </div>
         </section>
+    )
+}
+
+function CommandTotal   ()  {
+    const [command, setCommand] = useState<ProductType[]>([])
+
+    useEffect(() =>{
+        const storedCommand = localStorage.getItem('command')
+
+        if (storedCommand) {
+            setCommand(JSON.parse(storedCommand))
+        }
+    }, [])
+
+    return  (
+        <div className={styles.total}>
+            <strong>Total: </strong>
+            <p>R$ {command.reduce((total, product) => total + product.price, 0).toFixed(2)} </p>
+        </div>
     )
 }
 
