@@ -1,5 +1,7 @@
 @import '@/src/styles/globals';
 
+
+
 .section {
     display: flex;
     flex-direction: column;
@@ -111,4 +113,9 @@
             font-size: 24px;
         }
     }
+}
+
+.active {
+    background-color: $light-green-color;
+    color: $selector;
 }

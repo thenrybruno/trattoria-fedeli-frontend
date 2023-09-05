@@ -29,7 +29,7 @@ const TableMenu: NextPage = (props: { children?: ReactNode }) => {
                             <li className={styles.li}>Sobremesas</li>
                         </Link>
                         <Link href={'/table-menu/extras'}>
-                            <li className={styles.li + ' active'}>Extras</li>
+                            <li className={styles.li + ' ' + styles.active}>Extras</li>
                         </Link>
                     </ul>
                     <div className={styles.menu}>

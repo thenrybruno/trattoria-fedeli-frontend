@@ -1,0 +1,52 @@
+@import '@/src/styles/globals';
+
+.section   {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px 120px;
+
+    p   {
+        font-size: 20px;
+    }
+
+    img {
+        border-radius: 10px;
+    }
+}
+
+.h1 {
+    color: $dark-green-color;
+    font-size: 48px;
+}
+
+.link   {
+    color: $dark-green-color;
+    font-size: 20px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media  (max-width: 768px)  {
+    .section    {
+        gap: 20px;
+        padding: 20px;
+        p   {
+            font-size: 14px;
+        }
+    }
+}
+
+@media  (max-width: 480px)  {
+    .h1 {
+        font-size: 30px;
+    }
+
+    .section    {
+        gap: 20px;
+        padding: 10px;
+        p   {
+            font-size: 12px;
+        }
+    }
+}

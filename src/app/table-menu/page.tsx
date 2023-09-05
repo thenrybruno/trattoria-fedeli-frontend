@@ -1,10 +1,10 @@
+'use client'
 import Header from '@/src/components/Header'
 import styles from './TableMenu.module.scss'
 import { NextPage } from 'next'
 import { ReactNode } from 'react'
 import Footer from '@/src/components/common/Footer'
 import Entrances from '@/src/components/ListProducts/Entrances'
-import '@/src/styles/globals.scss'
 import Link from 'next/link'
 
 const TableMenu: NextPage = (props: { children?: ReactNode }) => {
@@ -17,7 +17,7 @@ const TableMenu: NextPage = (props: { children?: ReactNode }) => {
                 <section className={styles.productSection}>
                     <ul className={styles.ul}>
                         <Link href={'/table-menu'}>
-                            <li className={styles.li + ' active'}>Entradas</li>
+                            <li className={styles.li + ' ' + styles.active}>Entradas</li>
                         </Link>
                         <Link href={'/table-menu/main-dishes'}>
                             <li className={styles.li}>Pratos</li>

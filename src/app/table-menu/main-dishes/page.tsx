@@ -20,7 +20,7 @@ const TableMenu: NextPage = (props: { children?: ReactNode }) => {
                             <li className={styles.li}>Entradas</li>
                         </Link>
                         <Link href={'/table-menu/main-dishes'}>
-                            <li className={styles.li + ' active'}>Pratos</li>
+                            <li className={styles.li + ' ' + styles.active}>Pratos</li>
                         </Link>
                         <Link href={'/table-menu/drinks'}>
                             <li className={styles.li}>Bebidas</li>
