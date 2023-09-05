@@ -32,7 +32,7 @@ export default function TableOrder() {
             localStorage.setItem('user', JSON.stringify(user))
             isLoggedIn = true
             sessionStorage.setItem('isLoggedIn', JSON.stringify(isLoggedIn))
-            router.push('/table-menu')
+            router.push('/')
         }
     }
 
@@ -88,7 +88,7 @@ export default function TableOrder() {
                         Prosseguir
                     </button>
                 </form>
-                <Link href={'/order'} className={styles.back_text}>
+                <Link href={'/'} className={styles.back_text}>
                     Voltar
                 </Link>
                 <div className={styles.politic}>

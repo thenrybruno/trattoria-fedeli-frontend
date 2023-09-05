@@ -21,7 +21,7 @@ export default function Home() {
             </section>
             <section className={styles.container_2}>
                 <h2>Boas vindas à Trattoria Fedeli!</h2>
-                <Link href={'/order'}>
+                <Link href={'/table-order'}>
                     <button className={styles.button}>Faça o seu pedido!</button>
                 </Link>
                 <Link href={'/about-us'}>

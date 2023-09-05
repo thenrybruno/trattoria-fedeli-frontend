@@ -4,8 +4,8 @@
     align-items: center;
     background-color: $dark-red-color;
     display: flex;
-    justify-content: space-around;
-    padding: 10px 0px;
+    justify-content: space-between;
+    padding: 10px 140px;
     position: fixed;
     width: 100%;
     z-index: 100;
@@ -18,22 +18,19 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 35px;
-    padding: 0px 5px;
+    height: 45px;
+    padding: 0px 15px;
     width: 300px;
 
     input {
         border: none;
         font-size: 12px;
-        height: 20px;
+        height: 40px;
         padding: 0 20px;
-        width: 250px;
-
+        width: 240px;
         outline: none;
     }
 }
-
-
 
 .search {
     background-color: $dark-green-color;
@@ -43,7 +40,7 @@
 }
 
 .logo   {
-    width: 140px;
+    width: 250px;
 }
 
 .userButton {
@@ -81,10 +78,45 @@
     gap: 10px;
 }
 
+@media  (max-width: 1220px) {
+    .header {
+        padding: 10px 90px;
+    }
+    .logo   {
+        width: 150px;
+    }
+
+    .searchBar  {
+        height: 35px;
+        padding: 0px 10px;
+        width: 280px;
+    
+        input {
+            height: 30px;
+            padding: 0 10px;
+            width: 240px;
+        }
+    }
+}
+
 @media(max-width: 768px){
     .header{
+        padding: 10px 40px;
+
         .logo{
-            width: 150px;
+            width: 110px;
+        }
+
+        .searchBar  {
+            height: 30px;
+            padding: 0px 10px;
+            width: 220px;
+        
+            input {
+                height: 25px;
+                padding: 0 10px;
+                width: 180px;
+            }
         }
     }
 
@@ -100,12 +132,19 @@
 @media(max-width: 550px){
     .header{
         .logo{
-            width: 80px;
+            width: 70px;
         }
-    
-        input{
-            width: 130px;
-            height: 25px;
+
+        .searchBar  {
+            height: 20px;
+            padding: 0px 5px;
+            width: 120px;
+        
+            input {
+                height: 15px;
+                padding: 0 0px;
+                width: 90px;
+            }
         }
     }
 
@@ -140,6 +179,12 @@
     .triangle   {
         height: 5px;
         width: 5px;
+    }
+}
+
+@media  (max-width: 425px)  {
+    .header {
+        padding: 5px 10px;
     }
 }
 

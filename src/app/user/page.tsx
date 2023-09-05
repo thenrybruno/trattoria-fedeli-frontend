@@ -33,7 +33,7 @@ const UserDashboard: NextPage = (props: { children?: ReactNode, entry?: CommandE
             <Header />
             <main className={styles.main}>
                 <h1 className={styles.h1}>Minha comanda</h1>
-                <p>Acompanhe seu pedido de perto!</p>
+                <p className={styles.p}>Acompanhe seu pedido de perto!</p>
                 <section className={styles.dashboard}>
                     {
                         command.length < 1 ?
@@ -43,9 +43,9 @@ const UserDashboard: NextPage = (props: { children?: ReactNode, entry?: CommandE
                         :
                         <div>
                             <CommandProduct/>
+                            <CommandTotal/>
                         </div>
                     }
-                <CommandTotal/>
                 </section>
             </main>
             <Footer />
@@ -90,9 +90,10 @@ const TableRow = (props: {
         <div className={styles.row}>
             <span className={styles.divide} >
                 <img src={props.entry.product.imageUrl} alt={props.entry.product.name} className={styles.thumbnail} />
+                {props.entry.product.name}
             </span>
             <span className={styles.divide}>
-                {props.entry.product.name}
+                R$ {props.entry.product.price}
             </span>
             <span className={styles.divide}>
                 {props.entry.quantity}
@@ -185,7 +186,7 @@ function CommandTotal   ()  {
     return  (
         <div className={styles.total}>
             <strong>Total: </strong>
-            <p>R$ {command.reduce((total, product) => total + product.price, 0).toFixed(2)} </p>
+            <p className={styles.price}>R$ {command.reduce((total, product) => total + product.price, 0).toFixed(2)} </p>
         </div>
     )
 }

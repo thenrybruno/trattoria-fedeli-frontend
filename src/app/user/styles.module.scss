@@ -5,7 +5,7 @@
     flex-direction: column;
     gap: 20px;
     min-height: 100vh;
-    padding: 80px 140px;
+    padding: 120px 140px;
 
     p   {
         margin-bottom: 5px;
@@ -28,6 +28,7 @@
     justify-content: space-evenly;
 
     h6  {
+        text-align: left;
         font-size: 16px;
         width: 220px;
     }
@@ -42,7 +43,7 @@
 .divide {
     align-items: center;
     display: flex;
-    font-size: 12px;
+    font-size: 16px;
     gap: 5px;
     padding: 5px 0px;
     width: 220px;
@@ -79,17 +80,17 @@
 }
 
 .thumbnail  {
-    width: 60px;
+    width: 80px;
 }
 
 .total  {
+    align-self: flex-end;
     display: flex;
     flex-direction: row;
     gap: 40px;
-    justify-content: space-between;
-    padding: 0px 2%;
-    width: 100%;
-
+    justify-content: flex-end;
+    padding-right: 12%;
+    text-align: left;
 }
 
 @media  (max-width: 1220px) {
@@ -97,14 +98,26 @@
         padding: 80px 100px;
     }
 
+    .h1 {
+        font-size: 32px;
+    }
+
     .tr {
         h6  {
             width: 180px;
         }
     }
+
     .divide {
         font-size: 10px;
         width: 180px;
+    }
+
+    .total  {
+        .price  {
+            font-size: 10px;
+        }
+        padding-right: 2%;
     }
 
     .dashboard  {
@@ -123,12 +136,20 @@
 }
 
 @media  (max-width: 768px)  {
+    .row    {
+        gap: 10px;
+    }
     .h1 {
-        font-size: 30px;
+        font-size: 20px;
+        margin-top: 40px;
     }
 
     .main   {
         padding: 60px 30px;
+        text-align: center;
+        .p   {
+            font-size: 12px;
+        }
     }
 
     .dashboard  {
@@ -138,22 +159,35 @@
     .tr {
         h6  {
             font-size: 10px;
-            width: 140px;
+            width: 100px;
+
         }
     }
 
     .divide {
         font-size: 8px;
-        width: 120px;
+        width: 100px;
     }
 
     .thumbnail  {
         width: 30px;
     }
+
+    .total  {
+        font-size: 8px;
+        padding-right: 2%;
+        .price  {
+            font-size: 8px;
+        }
+    }
 }
 
 @media  (max-width: 425px)  {
+    .thumbnail  {
+        display: none;
+    }
+
     .main   {
-        padding: 60px 5px;
+        padding: 20px 5px;
     }
 }
