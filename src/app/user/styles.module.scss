@@ -79,6 +79,10 @@
     background-color: $light-red-color;
 }
 
+.empty  {
+    padding: 0px 40px;
+}
+
 .thumbnail  {
     width: 80px;
 }
@@ -92,6 +96,7 @@
     padding-right: 12%;
     text-align: left;
 }
+
 
 @media  (max-width: 1220px) {
     .main   {
