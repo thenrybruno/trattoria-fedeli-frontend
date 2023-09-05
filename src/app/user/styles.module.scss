@@ -7,3 +7,30 @@
 .h1 {
     font-size: 40px;
 }
+
+.tr {
+    display: flex;
+    justify-content: space-evenly;
+
+    h6  {
+        width: 220px;
+    }
+}
+
+.row    {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.divide {
+    align-items: center;
+    display: flex;
+    font-size: 12px;
+    padding: 5px 0px;
+    width: 220px;
+}
+
+.thumbnail  {
+    width: 60px;
+}
