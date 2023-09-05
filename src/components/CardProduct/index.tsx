@@ -1,7 +1,6 @@
 'use client'
-import { useCommand } from '../../hooks/useMenu'
 import { ProductType } from '../../services/products'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './index.module.scss'
 
 type CardProductsProps = {
@@ -9,9 +8,38 @@ type CardProductsProps = {
 }
 
 const CardProduct: React.FC<CardProductsProps> = ({ product }) => {
-    const { name, details, price, imageUrl, vegetarian } = product
-    const { addProduct, removeProduct } = useCommand()
+    const [command, setCommand] = useState<ProductType[]>([])
+    const { id, name, details, price, imageUrl, vegetarian, category } = product
+    const [amount, setAmount] = useState(1)
+    const products: ProductType[] = []
 
+    useEffect(() =>{
+        const storedCommand = localStorage.getItem('command')
+
+        if (storedCommand) {
+            setCommand(JSON.parse(storedCommand))
+        }
+    }, [])
+
+    const addProduct = (product: ProductType, amount: number) =>{
+        for (let i = 1; i <= amount; i++) {
+            const updateCart = [...command, product]
+            localStorage.setItem('command', JSON.stringify(updateCart))
+            command.push(product)
+            setCommand(updateCart)
+        }
+    }
+
+    const removeProduct = (productId: number) =>{
+        const productIndex = command.findIndex(product => product.id === productId)
+
+        if (productIndex !== -1) {
+            const updatedCart = [...command]
+            updatedCart.splice(productIndex, 1)
+            localStorage.setItem('command', JSON.stringify(updatedCart))
+            setCommand(updatedCart)
+        }
+    }
     return (
         <div className={styles.card}>
             <img
@@ -28,17 +56,22 @@ const CardProduct: React.FC<CardProductsProps> = ({ product }) => {
                     <button
                         className={styles.remove_button}
                         onClick={() => {
-                            removeProduct(product.id)
+                            if(amount <= 1) {
+
+                            } else  {
+                                setAmount(amount - 1)
+                            }
                         }}
                     >
                         -
                     </button>
-                    <span className={styles.number}>1</span>
+                    <span className={styles.number} >{amount}</span>
                     <button
                         className={styles.add_button}
-                        onClick={() => {
-                            addProduct(product)
-                        }}
+                        onClick={ () => {
+                            setAmount(amount + 1)
+                        }
+                        }
                     >
                         +
                     </button>
@@ -46,9 +79,10 @@ const CardProduct: React.FC<CardProductsProps> = ({ product }) => {
             </span>
             <button
                 className={styles.button_add_dish}
-                onClick={() => {
-                    addProduct(product)
-                }}
+                onClick={ () => {
+                    addProduct(product, amount)
+                    }
+                }
             >
                 Adicionar
             </button>

@@ -26,10 +26,14 @@ export default function Home() {
                 <Link href={'/order'}>
                     <button className={styles.button}>Faça o seu pedido!</button>
                 </Link>
-                <button className={styles.button}>Conheça mais sobre nós!</button>
+                <Link href={'/about-us'}>
+                    <button className={styles.button}>Conheça mais sobre nós!</button>
+                </Link>
                 <div className={styles.politic}>
                     <p>Ao utilizar nosso sistema, você concorda com nossas</p>
-                    <span>Políticas de Privacidade.</span>
+                    <Link href={'/privacy'}>
+                        <span>Políticas de Privacidade.</span>
+                    </Link>
                 </div>
                 <Footer />
             </section>
