@@ -9,6 +9,7 @@ const Header = () => {
                 alt="Trattoria Fedeli"
                 width={170}
                 height={45}
+                className={styles.logo}
             />
             <input type="search" name="find" id="find" />
             <div>
