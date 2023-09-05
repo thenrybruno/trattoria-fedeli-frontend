@@ -1,6 +1,6 @@
 # Trattoria Fedeli - Front-end
 
-![Alt text](image.png)
+<img src="https://i.imgur.com/tfNJn2F.png"><img/>
 
 ## About The Project
 This application contains the front-end side of the Trattoria Fedeli project. It's meant to be a showing site for the project's data that comes from the back-end and the database.
