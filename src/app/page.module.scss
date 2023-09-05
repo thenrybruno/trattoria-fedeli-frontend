@@ -3,16 +3,15 @@
 .main {
     display: flex;
     min-height: 100vh;
+    width: 100%;
 }
 
 .logo {
-    display: block;
-    position: sticky;
-    width: 400px;
+    @include logo;
 }
 
 .logo_mobile {
-    display: none;
+    @include logo_mobile;
 }
 
 .button {
@@ -92,25 +91,7 @@
     }
 }
 
-@media (max-width: 1300px) {
-    .logo {
-        width: 500px;
-    }
-}
-
-@media (max-width: 1100px) {
-    .logo {
-        width: 400px;
-        height: 120px;
-    }
-}
-
 @media (max-width: 850px) {
-    .logo {
-        width: 300px;
-        height: 100px;
-    }
-
     .container_2 {
         h2 {
             font-size: 40px;
@@ -138,27 +119,5 @@
         h2 {
             margin-top: -40px;
         }
-    }
-
-    .logo {
-        display: none;
-    }
-
-    .logo_mobile {
-        display: block;
-    }
-}
-
-@media (max-width: 620px) {
-    .logo_mobile {
-        width: 400px;
-        height: 100px;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo_mobile {
-        width: 330px;
-        height: 80px;
     }
 }
