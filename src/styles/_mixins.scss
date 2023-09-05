@@ -1,5 +1,16 @@
 @import './colors';
 
+@mixin main {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+
+    @media (max-width: 768px) {
+        background-color: $white-color;
+        flex-direction: column;
+    }
+}
+
 @mixin button {
     background-color: $light-green-color;
     background-image: linear-gradient(100deg, $light-green-color 0%, $dark-green-color 100%);
@@ -10,6 +21,9 @@
     font-weight: 700;
     position: relative;
     z-index: 1;
+    width: 640px;
+    height: 70px;
+    font-size: 35px;
 
     &::before {
         background-color: $dark-green-color;
@@ -29,6 +43,99 @@
     &:hover::before {
         opacity: 1;
     }
+
+    @media (max-width: 1440px) {
+        font-size: 30px;
+        height: 60px;
+        width: 500px;
+    }
+
+    @media (max-width: 1300px) {
+        font-size: 24px;
+        height: 60px;
+        width: 460px;
+    }
+
+    @media (max-width: 1100px) {
+        width: 400px;
+        height: 60px;
+        font-size: 25px;
+    }
+
+    @media (max-width: 850px) {
+        width: 300px;
+        height: 50px;
+        font-size: 22px;
+    }
+
+    @media (max-width: 768px) {
+        border-radius: 15px;
+        width: 580px;
+        height: 80px;
+        font-size: 36px;
+    }
+
+    @media (max-width: 620px) {
+        width: 450px;
+        height: 60px;
+        font-size: 30px;
+    }
+
+    @media (max-width: 480px) {
+        border-radius: 10px;
+        width: 330px;
+        height: 45px;
+        font-size: 20px;
+    }
+
+    @media (max-width: 375px) {
+        width: 290px;
+    }
+}
+
+@mixin logo {
+    bottom: 32%;
+    display: block;
+    margin: 0 auto;
+    position: sticky;
+    top: 32%;
+    width: 700px;
+
+    @media (max-width: 1500px) {
+        width: 550px;
+    }
+
+    @media (max-width: 1300px) {
+        width: 500px;
+    }
+
+    @media (max-width: 1100px) {
+        width: 400px;
+    }
+
+    @media (max-width: 850px) {
+        width: 300px;
+    }
+
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+
+@mixin logo_mobile {
+    display: none;
+
+    @media (max-width: 768px) {
+        display: block;
+    }
+
+    @media (max-width: 620px) {
+        width: 400px;
+    }
+
+    @media (max-width: 480px) {
+        width: 280px;
+    }
 }
 
 @mixin container_1 {
@@ -38,25 +145,25 @@
     display: grid;
     place-content: center;
 
-    @media  (max-width: 768px)  {
+    @media (max-width: 768px) {
         h2 {
             font-size: 40px;
         }
         width: 100%;
         min-height: 40%;
         background: $white-color;
-        padding-top: 70px;
+        padding: 20px 10px;
     }
 }
 
-@mixin container_2  {
+@mixin container_2 {
     align-self: center;
     width: 50%;
     background-color: $color-backgroud;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 130px 0px 0 20px;
+    padding: 80px 10px 20px 10px;
     gap: 40px;
     margin: 0 auto;
 
@@ -68,6 +175,10 @@
         text-align: center;
     }
 
+    form {
+        padding: 0px 30px;
+    }
+
     .back_text {
         color: $dark-green-color;
         font-size: 24px;
@@ -75,13 +186,45 @@
         margin-top: -7px;
     }
 
-    @media  (max-width: 850px)  {
-        h2 {
-            font-size: 40px;
+    @media (max-width: 1100px) {
+        form {
+            .input_name {
+                width: 400px;
+            }
+
+            .input_phone {
+                width: 250px;
+            }
+
+            .input_table {
+                width: 100px;
+            }
         }
     }
 
-    @media  (max-width: 768px)  {
+    @media (max-width: 850px) {
+        h2 {
+            font-size: 40px;
+        }
+
+        form {
+            font-size: 18px;
+
+            .input_name {
+                width: 300px;
+            }
+
+            .input_phone {
+                width: 200px;
+            }
+
+            .input_table {
+                width: 80px;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
         width: 100%;
         min-height: 60%;
         background: $white-color;
@@ -89,8 +232,76 @@
         h2 {
             margin-top: -40px;
         }
+
+        form {
+            font-size: 24px;
+
+            .input_name {
+                width: 500px;
+            }
+
+            .input_phone {
+                width: 250px;
+            }
+
+            .input_table {
+                width: 100px;
+            }
+        }
     }
 
+    @media (max-width: 620px) {
+        h2 {
+            font-size: 30px;
+        }
+
+        form {
+            font-size: 18px;
+
+            .input_name {
+                width: 400px;
+            }
+
+            .input_phone {
+                width: 200px;
+            }
+
+            .input_table {
+                width: 80px;
+            }
+        }
+
+        .back_text {
+            font-size: 24px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        h2 {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        form {
+            font-size: 18px;
+
+            .input_name {
+                width: 310px;
+            }
+
+            .input_phone {
+                width: 180px;
+            }
+        }
+
+        label {
+            font-size: 14px;
+        }
+
+        .back_text {
+            font-size: 20px;
+        }
+    }
 }
 
 @mixin politics {
@@ -103,8 +314,21 @@
     font-size: 15px;
     text-align: center;
 
+    p {
+        font-size: 12px;
+        font-weight: normal;
+    }
+
     span {
         color: $light-gray-color;
         font-size: 15px;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 12px;
+
+        span {
+            font-size: 12px;
+        }
     }
 }

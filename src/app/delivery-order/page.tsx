@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import styles from './DeliveryOrder.module.scss'
 import Footer from '@/src/components/common/Footer'
 import Link from 'next/link'
@@ -39,8 +38,8 @@ export default function DeliveryOrder() {
                             className={styles.input_password}
                         />
                     </div>
+                    <button className={styles.button}>Fazer login</button>
                 </form>
-                <button className={styles.button}>Fazer login</button>
                 <p>
                     Ou, crie sua conta
                     <Link href={'/delivery-order/register'}>

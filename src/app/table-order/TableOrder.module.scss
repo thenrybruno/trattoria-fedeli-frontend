@@ -1,26 +1,18 @@
 @import '/src/styles/globals.scss';
 
 .main {
-    display: flex;
-    width: 100%;
-    min-height: 100vh;
+    @include main;
 }
 
 .logo {
-    bottom: 42%;
-    display: block;
-    position: sticky;
-    width: 400px;
+    @include logo;
 }
 
 .logo_mobile {
-    display: none;
+    @include logo_mobile;
 }
 
 .button {
-    width: 640px;
-    height: 70px;
-    font-size: 35px;
     @include button;
 }
 
@@ -29,17 +21,14 @@
 }
 
 .container_2 {
-    @include container_2;
-
-
     h2 {
         font-family: 'Neuton';
         font-size: 44px;
-        font-weight: 700;
         color: $dark-green-color;
         text-align: center;
-        width: 380px;
     }
+
+    @include container_2;
 
     span {
         color: $dark-green-color;
@@ -52,12 +41,16 @@
         font-size: 24px;
         color: $dark-green-color;
         font-weight: 700;
+        padding: 0px 40px;
+        width: 100%;
 
         input {
             background-color: $input-color;
             border: none;
             border-radius: 10px;
             height: 50px;
+            width: 100%;
+            font-size: 20px;
         }
 
         .flex_input {
@@ -73,7 +66,7 @@
         }
 
         .input_name {
-            width: 500px;
+            width: 100%;
         }
 
         .input_phone {
@@ -86,246 +79,44 @@
         }
     }
 
-    .back_text {
-        color: $dark-green-color;
-        font-size: 24px;
-        font-weight: 700;
-        margin-top: -7px;
-        transition: 0.3s;
-    }
-
     .back_text:hover {
         color: $light-green-color;
     }
 }
 
+.back_text {
+    color: $dark-green-color;
+    font-size: 29px;
+    font-weight: 700;
+    margin-top: -7px;
+    transition: 0.3s;
+}
+
 .politic {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-weight: 600;
-    margin-bottom: 10px;
-    color: $text-color;
-    font-size: 15px;
-    text-align: center;
-
-    span {
-        color: $light-gray-color;
-        font-size: 15px;
-    }
-}
-@media (max-width: 1440px) {
-    .button {
-        border-radius: 10px;
-        font-size: 30px;
-        height: 55px;
-        width: 500px;
-    }
+    @include politics;
 }
 
-//responsividade
-@media (max-width: 1300px) {
-    .button {
-        width: 540px;
-    }
-
-    .logo {
-        width: 500px;
-    }
-}
-
-@media (max-width: 1100px) {
-    .button {
-        width: 400px;
-        height: 60px;
-        font-size: 25px;
-    }
-
-    .logo {
-        width: 400px;
-        height: 120px;
-    }
-
-    .container_2 {
-        form {
-            .input_name {
-                width: 400px;
-            }
-
-            .input_phone {
-                width: 250px;
-            }
-
-            .input_table {
-                width: 100px;
-            }
-        }
-    }
-}
-
-@media (max-width: 850px) {
-    .button {
-        width: 300px;
-        height: 50px;
-        font-size: 22px;
-    }
-
-    .logo {
-        width: 300px;
-        height: 100px;
-    }
-
-    .container_2 {
-        h2 {
-            font-size: 40px;
-        }
-
-        form {
-            font-size: 18px;
-
-            .input_name {
-                width: 300px;
-            }
-
-            .input_phone {
-                width: 200px;
-            }
-
-            .input_table {
-                width: 80px;
-            }
-        }
+@media (max-width: 950px) {
+    .flex_input_2 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 }
 
 @media (max-width: 768px) {
-    .main {
-        background-color: $white-color;
-        flex-direction: column;
-    }
-
-    .button {
-        width: 580px;
-        height: 70px;
-        font-size: 30px;
-    }
-
-    .container_1 {
-        width: 100%;
-        min-height: 40%;
-        background: $white-color;
-        padding-top: 70px;
-    }
-
-    .container_2 {
-        width: 100%;
-        min-height: 60%;
-        background: $white-color;
-
-        h2 {
-            margin-top: -40px;
-        }
-
-        form {
-            font-size: 24px;
-
-            .input_name {
-                width: 500px;
-            }
-
-            .input_phone {
-                width: 250px;
-            }
-
-            .input_table {
-                width: 100px;
-            }
-        }
-    }
-
-    .logo {
-        display: none;
-    }
-
-    .logo_mobile {
-        display: block;
-    }
-}
-
-@media (max-width: 620px) {
-    .button {
-        width: 450px;
-        height: 60px;
-    }
-
-    .logo_mobile {
-        width: 400px;
-        height: 100px;
-    }
-
-    .container_2 {
-        h2 {
-            font-size: 30px;
-        }
-
-        form {
-            font-size: 18px;
-
-            .input_name {
-                width: 400px;
-            }
-
-            .input_phone {
-                width: 200px;
-            }
-
-            .input_table {
-                width: 80px;
-            }
-        }
-    }
-
-    .back_text {
-        font-size: 18px;
-    }
 }
 
 @media (max-width: 480px) {
-    .button {
-        width: 300px;
-        height: 45px;
+    .container_2 {
+        padding: 0px;
+    }
+
+    .back_text {
         font-size: 20px;
     }
+}
 
-    .logo_mobile {
-        width: 310px;
-        height: 80px;
-    }
-
-    .container_2 {
-        h2 {
-            font-size: 35px;
-            width: 300px;
-        }
-
-        form {
-            font-size: 18px;
-
-            .input_name {
-                width: 310px;
-            }
-
-            .input_phone {
-                width: 180px;
-            }
-        }
-    }
-
-    .politic {
-        font-size: 12px;
-
-        span {
-            font-size: 12px;
-        }
-    }
+.button {
+    width: 100%;
 }

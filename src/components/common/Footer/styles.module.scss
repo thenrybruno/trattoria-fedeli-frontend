@@ -4,6 +4,17 @@
     font-size: 14px;
     text-align: center;
     color: $text-color;
+    padding: 20px 0px;
+
+    p {
+        font-size: 12px;
+        font-weight: normal;
+    }
+}
+
+.iconCredits {
+    color: $dark-green-color;
+    font-weight: bold;
 }
 
 @media (max-width: 480px) {

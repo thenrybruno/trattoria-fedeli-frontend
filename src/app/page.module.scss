@@ -81,29 +81,10 @@
 }
 
 .politic {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-weight: 600;
-    margin-bottom: 80px;
-    color: $text-color;
-    font-size: 15px;
-    text-align: center;
-
-    span {
-        color: $light-gray-color;
-        font-size: 15px;
-    }
+    @include politics;
 }
 
 @media (max-width: 1440px) {
-    .button {
-        border-radius: 10px;
-        font-size: 30px;
-        height: 60px;
-        width: 500px;
-    }
-
     .container_2 {
         h2 {
             font-size: 40px;
@@ -112,24 +93,12 @@
 }
 
 @media (max-width: 1300px) {
-    .button {
-        font-size: 24px;
-        height: 60px;
-        width: 460px;
-    }
-
     .logo {
         width: 500px;
     }
 }
 
 @media (max-width: 1100px) {
-    .button {
-        width: 400px;
-        height: 60px;
-        font-size: 25px;
-    }
-
     .logo {
         width: 400px;
         height: 120px;
@@ -137,12 +106,6 @@
 }
 
 @media (max-width: 850px) {
-    .button {
-        width: 300px;
-        height: 50px;
-        font-size: 22px;
-    }
-
     .logo {
         width: 300px;
         height: 100px;
@@ -159,13 +122,6 @@
     .main {
         background-color: $white-color;
         flex-direction: column;
-    }
-
-    .button {
-        border-radius: 20px;
-        width: 580px;
-        height: 80px;
-        font-size: 36px;
     }
 
     .container_1 {
@@ -194,12 +150,6 @@
 }
 
 @media (max-width: 620px) {
-    .button {
-        width: 450px;
-        height: 60px;
-        font-size: 30px;
-    }
-
     .logo_mobile {
         width: 400px;
         height: 100px;
@@ -207,12 +157,6 @@
 }
 
 @media (max-width: 480px) {
-    .button {
-        width: 330px;
-        height: 45px;
-        font-size: 20px;
-    }
-
     .logo_mobile {
         width: 330px;
         height: 80px;
