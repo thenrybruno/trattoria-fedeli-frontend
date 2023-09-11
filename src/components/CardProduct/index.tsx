@@ -11,7 +11,6 @@ const CardProduct: React.FC<CardProductsProps> = ({ product }) => {
     const [command, setCommand] = useState<ProductType[]>([])
     const { id, name, details, price, imageUrl, vegetarian, category } = product
     const [amount, setAmount] = useState(1)
-    const products: ProductType[] = []
 
     useEffect(() =>{
         const storedCommand = localStorage.getItem('command')
@@ -30,16 +29,6 @@ const CardProduct: React.FC<CardProductsProps> = ({ product }) => {
         }
     }
 
-    const removeProduct = (productId: number) =>{
-        const productIndex = command.findIndex(product => product.id === productId)
-
-        if (productIndex !== -1) {
-            const updatedCart = [...command]
-            updatedCart.splice(productIndex, 1)
-            localStorage.setItem('command', JSON.stringify(updatedCart))
-            setCommand(updatedCart)
-        }
-    }
     return (
         <div className={styles.card}>
             <img

@@ -13,17 +13,15 @@ export default function Home() {
                     alt="Trattoria Fedeli"
                     className={styles.logo}
                 />
-                <Image
+                <img
                     src={'/img/trattoria-logo.png'}
                     alt="Trattoria Fedeli"
-                    width={500}
-                    height={140}
                     className={styles.logo_mobile}
                 />
             </section>
             <section className={styles.container_2}>
                 <h2>Boas vindas à Trattoria Fedeli!</h2>
-                <Link href={'/order'}>
+                <Link href={'/table-order'}>
                     <button className={styles.button}>Faça o seu pedido!</button>
                 </Link>
                 <Link href={'/about-us'}>

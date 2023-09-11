@@ -11,15 +11,25 @@ export default function TableOrder() {
 
     function formAuth() {
         //@ts-ignore
-        const name: any = document.getElementById('name')?.value.length
+        const name: any = document.getElementById('name')?.value
         //@ts-ignore
-        const table: any = document.getElementById('table')?.value.length
+        const table: any = document.getElementById('table')?.value
         //@ts-ignore
-        const cellphone: any = document.getElementById('cel-phone')?.value.length
+        const cellphone: any = document.getElementById('cel-phone')?.value
+        //@ts-ignore
+        const atHome: any = false
 
-        if (name < 3 || table < 1 || cellphone < 10) {
+        if (name.length < 3 || table.length < 1 || cellphone.length < 10) {
             alert('Insira valores válidos no formulário!')
         } else {
+            const user = {
+                name,
+                table,
+                cellphone,
+                atHome
+            }
+
+            localStorage.setItem('user', JSON.stringify(user))
             isLoggedIn = true
             sessionStorage.setItem('isLoggedIn', JSON.stringify(isLoggedIn))
             router.push('/table-menu')
@@ -34,11 +44,9 @@ export default function TableOrder() {
                     alt="Trattoria Fedeli"
                     className={styles.logo}
                 />
-                <Image
+                <img
                     src={'/img/trattoria-logo.png'}
                     alt="Trattoria Fedeli"
-                    width={500}
-                    height={140}
                     className={styles.logo_mobile}
                 />
             </section>
@@ -80,7 +88,7 @@ export default function TableOrder() {
                         Prosseguir
                     </button>
                 </form>
-                <Link href={'/order'} className={styles.back_text}>
+                <Link href={'/'} className={styles.back_text}>
                     Voltar
                 </Link>
                 <div className={styles.politic}>

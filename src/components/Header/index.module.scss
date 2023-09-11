@@ -1,50 +1,229 @@
 @import '/src/styles/colors';
 
 .header {
-    height: 10vh;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
     align-items: center;
     background-color: $dark-red-color;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 140px;
     position: fixed;
+    width: 100%;
     z-index: 100;
+}
+
+.searchBar  {
+    align-items: center;
+    background-color: $input-color;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 45px;
+    padding: 0px 15px;
+    width: 300px;
 
     input {
-        width: 300px;
-        height: 40px;
-        border-radius: 50px;
-        background-color: $input-color;
         border: none;
-        font-size: 24px;
+        font-size: 12px;
+        height: 40px;
         padding: 0 20px;
+        width: 240px;
+        outline: none;
+    }
+}
+
+.search {
+    background-color: $dark-green-color;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.logo   {
+    width: 250px;
+}
+
+.userButton {
+    align-items: center;
+    color: $white-color;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+
+    p   {
+        font-size: 18px;
+    }
+}
+
+.options    {
+    background-color: $light-red-color;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 15px 10px;
+    position: absolute;
+    width: 156px;
+}
+
+.menuItem   {
+    color: $white-color;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+    gap: 10px;
+}
+
+@media  (max-width: 1220px) {
+    .header {
+        padding: 10px 90px;
+    }
+    .logo   {
+        width: 150px;
+    }
+
+    .searchBar  {
+        height: 35px;
+        padding: 0px 10px;
+        width: 280px;
+    
+        input {
+            height: 30px;
+            padding: 0 10px;
+            width: 240px;
+        }
+    }
+    .menuItem   {
+        font-size: 10px;
     }
 }
 
 @media(max-width: 768px){
     .header{
+        padding: 10px 40px;
+
         .logo{
-            width: 150px;
-            height: 40px;
+            width: 110px;
         }
-    
-        input{
-            width: 250px;
-            height: 35px;
+
+        .searchBar  {
+            height: 30px;
+            padding: 0px 10px;
+            width: 220px;
+        
+            input {
+                height: 25px;
+                padding: 0 10px;
+                width: 180px;
+            }
         }
     }
+
+    .searchBar  {
+        width: 200px;
+
+        input{
+            width: 150px;
+        }
+    }
+
+    .menuItem   {
+        .icon   {
+            height: 15px;
+            width: 15px;
+        }
+    }
+
+
 }
 
 @media(max-width: 550px){
     .header{
         .logo{
-            width: 120px;
-            height: 30px;
+            width: 70px;
         }
-    
-        input{
-            width: 130px;
-            height: 25px;
+
+        .searchBar  {
+            height: 20px;
+            padding: 0px 5px;
+            width: 120px;
+        
+            input {
+                height: 15px;
+                padding: 0 0px;
+                width: 90px;
+            }
         }
     }
+
+    .searchBar  {
+        height: 20px;
+        width: 150px;
+
+        input{
+            height: 10px;
+            width: 100px;
+        }
+    }
+
+    .search {
+        padding: 2px;
+        height: 15px;
+        width: 15px;
+    }
+
+    .userButton   {
+        p   {
+            font-size: 8px;
+
+        }
+    }
+
+    .icon   {
+        height: 12px;
+        width: 12px;
+    }
+
+    .menuItem   {
+        gap: 2px;
+        .icon   {
+            height: 12px;
+            width: 12px;
+        }
+    }
+
+    .triangle   {
+        height: 5px;
+        width: 5px;
+    }
+
+    .options    {
+        width: 100px;
+    }
+
+    .menuItem   {
+        font-size: 8px;
+    }
+}
+
+@media  (max-width: 425px)  {
+    .header {
+        padding: 5px 10px;
+    }
+
+    .options    {
+        width: 80px;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.visible    {
+    display: flex;
 }
