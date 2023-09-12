@@ -11,7 +11,7 @@ const SuccessToast = (props: {
             isOpen={props.toastIsOpen}
             fade
         >
-            <ToastBody>
+            <ToastBody className="d-flex justify-content-between">
                 Pedido adicionado.
                 <Button
                     close
