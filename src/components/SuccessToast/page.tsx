@@ -15,7 +15,7 @@ const SuccessToast = (props: {
                 Pedido adicionado.
                 <Button
                     close
-                    className="btn-close-white"
+                    className="btn-close"
                     onClick={() => props.setToastIsOpen(false)}
                 >
                 </Button>
