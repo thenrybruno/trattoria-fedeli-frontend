@@ -2,6 +2,7 @@
 import { ProductType } from '../../services/products'
 import React, { useEffect, useState } from 'react'
 import styles from './index.module.scss'
+import SuccessToast from '../SuccessToast/page'
 
 type CardProductsProps = {
     product: ProductType
@@ -11,6 +12,7 @@ const CardProduct: React.FC<CardProductsProps> = ({ product }) => {
     const [command, setCommand] = useState<ProductType[]>([])
     const { id, name, details, price, imageUrl, vegetarian, category } = product
     const [amount, setAmount] = useState(1)
+    const [toastIsOpen, setToastIsOpen] = useState(false)
 
     useEffect(() =>{
         const storedCommand = localStorage.getItem('command')
@@ -70,11 +72,14 @@ const CardProduct: React.FC<CardProductsProps> = ({ product }) => {
                 className={styles.button_add_dish}
                 onClick={ () => {
                     addProduct(product, amount)
+                    setToastIsOpen(true)
+                    setTimeout(() => setToastIsOpen(false), 1000 * 3)
                     }
                 }
             >
                 Adicionar
             </button>
+            <SuccessToast toastIsOpen={toastIsOpen} setToastIsOpen={setToastIsOpen}/>
         </div>
     )
 }
